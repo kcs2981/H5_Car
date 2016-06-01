@@ -1,0 +1,199 @@
+@charset "utf-8";
+/*-----------------loading-------------*/
+body{font-size:62.5%;}
+.fakeloader,.index_bg{ position:absolute; width: 100%; height: 100%; top: 0; left:0; z-index: 9999; background: #1c262f;}
+.index_bg{color: #fff; }
+.index_bg p{ width: 100%; position: absolute; font:3rem/6rem "MicrsoftYaHei"; height:6em; text-align: center; top: 50%; left: 0; margin-top: -3rem;}
+.spinner1,.spinner2,.spinner3 {width: 40px;height: 40px;position: relative;  top: 50%; left:50%; margin:-20px 0 0 -20px; z-index: 10000;}
+.double-bounce1, .double-bounce2 {  width: 100%; height: 100%; border-radius: 50%; background-color: #fff; opacity: 0.6; position: absolute; top: 0; left: 0; -webkit-animation: bounce 2.0s infinite ease-in-out; animation: bounce 2.0s infinite ease-in-out;  }
+.double-bounce2 { -webkit-animation-delay: -1.0s; animation-delay: -1.0s;  }
+@-webkit-keyframes bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+}
+@keyframes bounce {
+    0%, 100% {  transform: scale(0.0); -webkit-transform: scale(0.0);
+    }50% {transform: scale(1.0); -webkit-transform: scale(1.0); }
+}
+/*------------2-----------*/
+.container1 > div, .container2 > div, .container3 > div { width: 6px; height: 6px; background-color: #fff; border-radius: 100%; position: absolute; -webkit-animation: bouncedelay 1.2s infinite ease-in-out; animation: bouncedelay 1.2s infinite ease-in-out;/* Prevent first frame from flickering when animation starts */ -webkit-animation-fill-mode: both; animation-fill-mode: both;}
+.spinner2 .spinner-container { position: absolute; width: 100%; height: 100%; }
+.container2 { -webkit-transform: rotateZ(45deg); transform: rotateZ(45deg);}
+.container3 { -webkit-transform: rotateZ(90deg); transform: rotateZ(90deg); }
+.circle1 { top: 0; left: 0; }
+.circle2 { top: 0; right: 0; }
+.circle3 { right: 0; bottom: 0; }
+.circle4 { left: 0; bottom: 0; }
+.container2 .circle1 { -webkit-animation-delay: -1.1s; animation-delay: -1.1s;}
+.container3 .circle1 { -webkit-animation-delay: -1.0s; animation-delay: -1.0s; }
+.container1 .circle2 { -webkit-animation-delay: -0.9s; animation-delay: -0.9s;}
+.container2 .circle2 { -webkit-animation-delay: -0.8s; animation-delay: -0.8s;  }
+.container3 .circle2 { -webkit-animation-delay: -0.7s; animation-delay: -0.7s;  }
+.container1 .circle3 { -webkit-animation-delay: -0.6s; animation-delay: -0.6s;  }
+.container2 .circle3 { -webkit-animation-delay: -0.5s; animation-delay: -0.5s;  }
+.container3 .circle3 { -webkit-animation-delay: -0.4s; animation-delay: -0.4s;  }
+.container1 .circle4 { -webkit-animation-delay: -0.3s; animation-delay: -0.3s;  }
+.container2 .circle4 { -webkit-animation-delay: -0.2s; animation-delay: -0.2s;  }
+.container3 .circle4 { -webkit-animation-delay: -0.1s; animation-delay: -0.1s;  }
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0.0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+@keyframes bouncedelay {
+    0%, 80%, 100% { transform: scale(0.0); -webkit-transform: scale(0.0);
+    } 40% { transform: scale(1.0); -webkit-transform: scale(1.0); }
+}
+/*------------3-----------*/
+.spinner3 { -webkit-animation: rotate 2.0s infinite linear; animation: rotate 2.0s infinite linear;  }
+.dot1, .dot2 { width: 60%; height: 60%; display: inline-block; position: absolute; top: 0; background-color: #fff; border-radius: 100%;  -webkit-animation: bounce 2.0s infinite ease-in-out; animation: bounce 2.0s infinite ease-in-out; }
+
+.dot2 { top: auto; bottom: 0; -webkit-animation-delay: -1.0s; animation-delay: -1.0s;  }
+@-webkit-keyframes rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+@-webkit-keyframes bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(0.0); -webkit-transform: scale(0.0);
+    } 50% { transform: scale(1.0); -webkit-transform: scale(1.0);  }
+}
+/*------------4-----------*/
+.spinner4 {  width: 30px;  height: 30px; position: absolute; top: 50%; left: 50%; margin: -15px 0 0 -15px;  background-color: #fff;  -webkit-animation: rotateplane 1.2s infinite ease-in-out;  animation: rotateplane 1.2s infinite ease-in-out;  }
+@-webkit-keyframes rotateplane {
+    0% { -webkit-transform: perspective(120px) }
+    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+    100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+@keyframes rotateplane {
+    0% { transform: perspective(120px) rotateX(0deg) rotateY(0deg); -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+    } 50% { transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+      } 100% { transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);}
+}
+/*------------5-----------*/
+.spinner5 {  width: 32px;  height: 32px; top: 50%; left: 50%; margin: -16px 0 0 -16px;  position: relative;  }
+.cube1, .cube2 {  background-color: #fff;  width: 10px;  height: 10px;  position: absolute; top: 0;  left: 0;-webkit-animation: cubemove 1.8s infinite ease-in-out;  animation: cubemove 1.8s infinite ease-in-out;  }
+.cube2 {  -webkit-animation-delay: -0.9s;  animation-delay: -0.9s;  }
+@-webkit-keyframes cubemove {
+    25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+    50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+    75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+    100% { -webkit-transform: rotate(-360deg) }
+}
+@keyframes cubemove {
+    25% { transform: translateX(42px) rotate(-90deg) scale(0.5); -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+    } 50% { transform: translateX(42px) translateY(42px) rotate(-179deg); -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+      } 50.1% { transform: translateX(42px) translateY(42px) rotate(-180deg); -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+        } 75% { transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5); -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+          } 100% { transform: rotate(-360deg); -webkit-transform: rotate(-360deg); }
+}
+/*------------6-----------*/
+.spinner6 {  width: 50px;  height: 30px;  text-align: center;  position: absolute; top: 50%; left: 50%; margin: -15px 0 0 -25px; }
+.spinner6 > div {  background-color: #fff;  height: 100%;  width: 6px;  margin-left:2px;  display: inline-block;  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;  animation: stretchdelay 1.2s infinite ease-in-out;  }
+.spinner6 .rect2 {  -webkit-animation-delay: -1.1s;  animation-delay: -1.1s;  }
+.spinner6 .rect3 {  -webkit-animation-delay: -1.0s;  animation-delay: -1.0s;  }
+.spinner6 .rect4 {  -webkit-animation-delay: -0.9s;  animation-delay: -0.9s;  }
+.spinner6 .rect5 {  -webkit-animation-delay: -0.8s;  animation-delay: -0.8s;  }
+@-webkit-keyframes stretchdelay {0%, 40%, 100% { -webkit-transform: scaleY(0.4) }20% { -webkit-transform: scaleY(1.0) } }
+@keyframes stretchdelay {
+    0%, 40%, 100% { transform: scaleY(0.4); -webkit-transform: scaleY(0.4);
+    }  20% { transform: scaleY(1.0); -webkit-transform: scaleY(1.0); }
+}
+/*------------7-----------*/
+.spinner7 {  width: 90px;  height: 30px;  text-align: center;  position: absolute; top: 50%; left: 50%; margin: -15px 0 0 -45px; }
+.spinner7 > div {  background-color: #fff;  height: 15px;  width: 15px;  margin-left:3px;  border-radius: 50%;  display: inline-block;  -webkit-animation: stretchdelay 0.7s infinite ease-in-out;  animation: stretchdelay 0.7s infinite ease-in-out;  }
+.spinner7 .circ2 {  -webkit-animation-delay: -0.6s;  animation-delay: -0.6s;  }
+.spinner7 .circ3 {  -webkit-animation-delay: -0.5s;  animation-delay: -0.5s;  }
+.spinner7 .circ4 {  -webkit-animation-delay: -0.4s;  animation-delay: -0.4s;  }
+.spinner7 .circ5 { -webkit-animation-delay: -0.3s; animation-delay: -0.3s;  }
+@-webkit-keyframes stretchdelay {
+    0%, 40%, 100% { -webkit-transform: translateY(-10px) }
+    20% { -webkit-transform: translateY(-20px) }
+}
+@keyframes stretchdelay {
+    0%, 40%, 100% { transform: translateY(-10px); -webkit-transform: translateY(-10px);
+    } 20% { transform: translateY(-20px); -webkit-transform: translateY(-20px);
+      }
+}
+
+/*--------------------------------reset css------------------------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;word-break:break-all;word-wrap:break-word;}
+fieldset,img{border:0}
+embed,param,object{ padding:0; margin:0; display:block; float:left; zoom:1; overflow:hidden;}/*重置flash样式*/
+:focus{outline:0; outline:none;}
+address,caption,cite,code,dfn,em,th,var,optgroup{font-style:normal;font-weight:normal}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+abbr,acronym{border:0;font-variant:normal}
+input,button,textarea,select,optgroup,option{/*font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit*/}
+code,kbd,samp,tt{font-size:100%}input,button,textarea,select{*font-size:100%}
+body{line-height:1.5}
+ol,ul{list-style:none;}
+table{border-collapse:collapse;border-spacing:0}
+caption,th{text-align:left}
+sup,sub{font-size:100%;vertical-align:baseline}
+:link,:visited ,ins{text-decoration:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+*{appearance:none;outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);border-radius:0;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:inline-block;zoom:1;}
+/* Hides from IE-mac*/
+* html .clearfix{height:1%;}
+.clearfix{display:block;}
+.ds_n{ display:none;}
+.ds_b{ display:block!important;}
+.v_h{visibility: hidden;}
+.col_f{color:#fff;}
+body{font:14px/1.5em "Arial","SimHei","黑体","Microsoft YaHei","微软雅黑";background:#1c262f; overflow: hidden; zoom:1;}
+li.bor_b_n{ border-bottom:none!important;}
+.pos_r{ position:relative;}.pos_a{ position:absolute;}.hide{visibility: hidden;}.txtOut{text-indent:-99999em;}
+
+/* -----------------------------------全局public-----------------------------*/
+.fl { float:left;}.f_n{ float:none!important;}.fr { float:right;}.db { display:block;}.dn { display:none!important;}.cl { clear:both;}.tl { text-align:left;}.tc { text-align:center;}.tr { text-align:right;}.d_i_b{ display:inline-block!important;}.ov_z{ overflow:hidden; zoom:1;}.ov_y_a{ overflow-x:hidden; overflow-y:auto;}.po_r{ position:relative;}.po_a{ position:absolute;}.mar_c{ margin:0 auto;}
+
+.car_content{ background:#659a00; width:100%; height: 100%; position:fixed; top: 0; left: 0; bottom:0; right:0;}
+/*--------------mod_car--------------*/
+.mod_car{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0; z-index:3;}
+.mod_car_img{width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0; background:url("../images/car_control.png") no-repeat; background-size:100% 100%; z-index:3;}
+.mod_road_bg{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0; background:url("../images/road.png") no-repeat; background-size:100% 100%; z-index:0;}
+.road_two_bg{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0;background:url("../images/road_bmx.png") no-repeat; background-size:100% 100%; z-index: 2;}
+.road_run{ position: absolute; left: 51%; top: 0; bottom:0; right: 0; z-index: 1;}
+.road_run img{ height:100%; display: block;}
+
+/*-------mod_one-----------*/
+.mod_roads{width:100%; height:100%; position: relative; top: 0; left: 0; right: 0; bottom:0;}
+.fm93_banner{width:16.79%; height: 28.5%; position: absolute; top: 0; right:18.29%; z-index:5; background: url("../images/fm93.png") no-repeat; background-size:100% 100%;}
+.mod_roads .road_left_part{ height:100%; width: 45.12%; display:inline-block; }
+.mod_roads .road_right_part{ height:100%; width: 49.47%; display:inline-block; }
+.mod_roads .road_left_part img,.mod_roads .road_right_part img{width:100%;height:100%; display: block}
+
+/*-------mod_two-----------*/
+.weChat{width:59%; height:16.7%; position: absolute; top:19%; left:3%; background: url("../images/wechat.png") no-repeat; background-size:100% 100%; z-index:5;}
+.people{width:10.8%; height:30.9%; position: absolute; top:11.73%; left:17.5%; background: url("../images/people.png") no-repeat; background-size:100% 100%; z-index:5;}
+.light{width:8.7%; height:44.5%; position: absolute; top:0; left:9.7%; background: url("../images/hld.png") no-repeat; background-size:100% 100%; z-index:5;}
+.otherCar{width:22.7%; height:61%; position: absolute; top:0; left:31.5%; background: url("../images/otherCar.png") no-repeat; background-size:100% 100%; z-index:2;}
+
+/*----------car control--------*/
+.img_100P{width:100%; height: 100%;}
+.car_mirror{width:38%; height:31%; position: absolute; top: 0; right: 2.2%; z-index: 4;}
+.car_steering{width:46.5%; height:83%; position: absolute; bottom:-40%; left: 17%; z-index: 5;}
+.car_left_right{width:7.6%; height:6%; position: absolute; bottom:11%; left: 12%; z-index: 4;}
+.car_left,.car_right{width:2.7%; height:4.5%; position: absolute; bottom:20%; left:31.7%; background: url("../images/left.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.car_right{left:49.3%;background: url("../images/right.png") no-repeat; background-size:100% 100%;}
+.car_left.icon_active{background: url("../images/left_h.png") no-repeat;background-size:100% 100%;}
+.car_right.icon_active{background: url("../images/right_h.png") no-repeat;background-size:100% 100%;}
+.car_icon_start{width:4.78%; height:8.7%; position: absolute; bottom:16%; left:62%; background: url("../images/start.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.car_fast,.car_slow{width:12.4%; height:23%; position: absolute;  background: url("../images/go.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.car_fast{right:2%;bottom:20%; }
+.car_slow{left:2%;bottom:20%;  background: url("../images/stop.png") no-repeat;background-size:100% 100%;}
+.drink{width:8.9%; height:38.3%; position: absolute; bottom:30%; left:55%; background: url("../images/drink.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.smoking{width:10.8%; height:10.53%; position: absolute; bottom:26%; left:60%; background: url("../images/smoke.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.rund_speed{width:7%; height:1%; position: absolute; bottom:14%; left:36.5%; background: url("../images/rund_speed.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.speed{width:6%; height:3%; position: absolute; bottom:10%; left:50%; background: url("../images/speed.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.drink_1{background: url("../images/drink1.png") no-repeat; background-size:100% 100%;}
+.drink_2{background: url("../images/drink2.png") no-repeat; background-size:100% 100%;}
+.drink_3{background: url("../images/drink3.png") no-repeat; background-size:100% 100%;}
+.drink_not{width:38.5%; height:50%; position: absolute; bottom:8.3%; left:39%; background: url("../images/drink_not.png") no-repeat; background-size:100% 100%; z-index: 3;}
+
+
