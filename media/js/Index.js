@@ -7,15 +7,18 @@ $(function(){
     });
     /*----------横竖屏切换判断------------*/
     var on_off = false;
+    var imgHight = -$(".fakeloader").find("img").innerHeight()/2 +"px";
     function changeBgsize(){
         if (window.orientation == 0 || window.orientation == 180) {
             $(".car_content").remove();
             on_off = false;
-            $(".index_bg").show();
+            $(".index_bg").removeAttr("style").removeClass("dn").find("div").removeClass("dn");
+            $(".fakeloader").find("img").addClass("v_h");
         }else if (window.orientation == 90 || window.orientation == -90) {
             on_off = true;
-            $(".index_bg,.fakeloader div").hide();
-            $(".fakeloader").show();
+
+            $(".index_bg").css({"background":"#334455"}).find("div").addClass("dn");
+            $(".fakeloader").find("img").css({"margin-top":imgHight}).removeClass("v_h");
         }
     };
     changeBgsize();
@@ -27,15 +30,10 @@ $(function(){
             $(".car_content").remove();
         }
     });
-
-    $(".fakeloader").fakeLoader({//loading图片样式，js预加载
-        timeToHide:2000,
-        bgColor:"#1c262f",
-        spinner:"spinner3" ,
-        callBack: function(){
-            kkk.loadingSene(".mod_road_one,.mod_one","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0");//导入第一个场景
-            //kkk.loadingPart2();
-        }
-    });
-
+    var loadingTime = setTimeout(function(){
+        $(".fakeloader").hide();
+        kkk.loadingSene(".mod_road_one,.mod_one","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0");//导入第一个场景
+        //kkk.loadingPart2();
+        window.clearTimeout(loadingTime);
+    },1500)
 });
