@@ -99,7 +99,7 @@ carWidge.prototype.turnLeft = function(){ //左转
     var _self = this;
     window.clearTimeout(_self.shutTimeR);
     $(".car_right").removeClass("icon_active");
-    $(".car_steering").removeClass("turnLeft");
+    $(".car_steering").removeClass("turnRight");
     function iconShut(){
         if($(".car_left").hasClass("icon_active")){
             $(".car_left").removeClass("icon_active");

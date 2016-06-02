@@ -32,8 +32,12 @@ $(function(){
     });
     var loadingTime = setTimeout(function(){
         $(".fakeloader").hide();
-        kkk.loadingSene(".mod_road_one,.mod_one","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0");//导入第一个场景
-        //kkk.loadingPart2();
         window.clearTimeout(loadingTime);
-    },1500)
+    },1500);
+
+    $(".start_button").on("click",function(){
+        $(".game_start").fadeOut(500);
+        kkk.loadingSene(".mod_road_one,.mod_one","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0");//导入第一个场景
+        ////kkk.loadingPart2();
+    });
 });

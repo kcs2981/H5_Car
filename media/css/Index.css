@@ -1,11 +1,13 @@
 @charset "utf-8";
-/*-----------------loading 切换至横屏-------------*/
+/*-----------------loading 切换至横屏 gameStart-------------*/
 body{font-size:62.5%;}
-.fakeloader,.index_bg{ position:fixed; width: 100%; height: 100%; top: 0; left:0; bottom:0; right:0; z-index: 999; background: #334455;}
+.fakeloader,.index_bg,.game_start{ position:fixed; width: 100%; height: 100%; top: 0; left:0; bottom:0; right:0; z-index: 999; background: #334455;}
 .fakeloader img{display: block; width:38%; position: relative; top: 50%; left: 50%; margin-left:-19%;}
 .index_bg{background: url("../images/hp_repit_x.png") repeat-x #fff; background-size: auto 100%;z-index: 1000;}
 .hp_pic{ width:83%; height: 36.5%; background: url("../images/hp_pic.png") no-repeat; background-size:100% 100%; position: absolute; bottom:26.5%; left:0;}
 .hp_txt{width:80%; height: 11.5%; background: url("../images/hp_txt.png") no-repeat; background-size:100% 100%; position: absolute; top: 20%; left: 50%; margin-left:-40%;}
+.game_start{ background: url("../images/start_pic.jpg") no-repeat; background-size:100% 100%; z-index: 998;}
+.start_button{width:29.3%; height: 17.8%; display:block; position: absolute; bottom:11.8%; left:36.2%;}
 
 
 /*--------------------------------reset css------------------------------*/
@@ -43,7 +45,9 @@ li.bor_b_n{ border-bottom:none!important;}
 /* -----------------------------------全局public-----------------------------*/
 .fl { float:left;}.f_n{ float:none!important;}.fr { float:right;}.db { display:block;}.dn { display:none!important;}.cl { clear:both;}.tl { text-align:left;}.tc { text-align:center;}.tr { text-align:right;}.d_i_b{ display:inline-block!important;}.ov_z{ overflow:hidden; zoom:1;}.ov_y_a{ overflow-x:hidden; overflow-y:auto;}.po_r{ position:relative;}.po_a{ position:absolute;}.mar_c{ margin:0 auto;}
 
+/*----------car_content-----------------*/
 .car_content{ background:#659a00; width:100%; height: 100%; position:fixed; top: 0; left: 0; bottom:0; right:0;}
+
 /*--------------mod_car--------------*/
 .mod_car{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0; z-index:3;}
 .mod_car_img{width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0; background:url("../images/car_control.png") no-repeat; background-size:100% 100%; z-index:3;}
