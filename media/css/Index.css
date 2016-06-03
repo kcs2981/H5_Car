@@ -70,20 +70,27 @@ li.bor_b_n{ border-bottom:none!important;}
 .otherCar{width:22.7%; height:61%; position: absolute; top:0; left:31.5%; background: url("../images/otherCar.png") no-repeat; background-size:100% 100%; z-index:2;}
 
 /*----------car control--------*/
+.introduce{margin:0 0 -50px -50px;  padding:50px;}
 .img_100P{width:100%; height: 100%;}
 .car_mirror{width:38%; height:31%; position: absolute; top: 0; right: 2.2%; z-index: 4;}
-.car_steering{width:46.5%; height:83%; position: absolute; bottom:-40%; left: 17%; z-index: 5;}
+.car_steering{width:46.5%; height:83%; position: absolute; bottom:-40%; left: 17%; z-index: 5; background:url("../images/steering.png") no-repeat; background-size:100% 100%;}
+.car_steering.introduce{background: url("../images/steering_h.png") no-repeat;background-size:100% 100%;}
 .car_left_right{width:7.6%; height:6%; position: absolute; bottom:11%; left: 12%; z-index: 4;}
 .car_left,.car_right{width:2.7%; height:4.5%; position: absolute; bottom:20%; left:31.7%; background: url("../images/left.png") no-repeat; background-size:100% 100%; z-index: 4;}
 .car_right{left:49.3%;background: url("../images/right.png") no-repeat; background-size:100% 100%;}
 .car_left.icon_active{background: url("../images/left_h.png") no-repeat;background-size:100% 100%;}
 .car_right.icon_active{background: url("../images/right_h.png") no-repeat;background-size:100% 100%;}
 .car_icon_start{width:4.78%; height:8.7%; position: absolute; bottom:16%; left:62%; background: url("../images/start.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.car_icon_start.introduce{background: url("../images/start_h.png") no-repeat;background-size:100% 100%;}
 .car_fast,.car_slow{width:12.4%; height:23%; position: absolute;  background: url("../images/go.png") no-repeat; background-size:100% 100%; z-index: 4;}
 .car_fast{right:2%;bottom:20%; }
+.car_fast.introduce{background: url("../images/go_h.png") no-repeat;background-size:100% 100%;}
 .car_slow{left:2%;bottom:20%;  background: url("../images/stop.png") no-repeat;background-size:100% 100%;}
+.car_slow.introduce{background: url("../images/stop_h.png") no-repeat;background-size:100% 100%;}
 .drink{width:8.9%; height:38.3%; position: absolute; bottom:30%; left:55%; background: url("../images/drink.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.drink.introduce{background: url("../images/drink_h.png") no-repeat;background-size:100% 100%;}
 .smoking{width:10.8%; height:10.53%; position: absolute; bottom:26%; left:60%; background: url("../images/smoke.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.smoking.introduce{background: url("../images/smoke_h.png") no-repeat;background-size:100% 100%;}
 .rund_speed{width:7%; height:1%; position: absolute; bottom:14%; left:36.5%; background: url("../images/rund_speed.png") no-repeat; background-size:100% 100%; z-index: 4;}
 .speed{width:6%; height:3%; position: absolute; bottom:10%; left:50%; background: url("../images/speed.png") no-repeat; background-size:100% 100%; z-index: 4;}
 .drink_1{background: url("../images/drink1.png") no-repeat; background-size:100% 100%;}

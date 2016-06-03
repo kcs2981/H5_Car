@@ -1,9 +1,4 @@
-@charset "UTF-8";/*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license - http://opensource.org/licenses/MIT
-
-Copyright (c) 2013 Daniel Eden
-*/
+@charset "UTF-8";
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
@@ -3364,6 +3359,42 @@ Copyright (c) 2013 Daniel Eden
 .turnRight {
     -webkit-animation-name: turnRight;
     animation-name: turnRight;
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+
+@-webkit-keyframes icon_shine {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        box-shadow:0 0 43px #fff;
+        -webkit-box-shadow: 0 0 43px #fff;
+        -moz-box-shadow:0 0 43px #fff;
+    }
+
+}
+
+@keyframes icon_shine {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        box-shadow:0 0 43px #fff;
+        -webkit-box-shadow: 0 0 43px #fff;
+        -moz-box-shadow:0 0 43px #fff;
+    }
+}
+
+.icon_shine {
+    -webkit-animation-name: icon_shine;
+    animation-name: icon_shine;
     -webkit-animation-duration:1s;
     animation-duration:1s;
     -webkit-animation-fill-mode: both;

@@ -21,6 +21,10 @@ function getAnimate(parentClass,element,x,delay,index,hideTime,callBack) {
 
 };
 
+function showshine(dElement,repeatTimes,displayTime){
+    $("."+dElement).hide().addClass("introduce").fadeIn(1000);
+};
+
 function carWidge(option){
     var _self = this;
     _self.setting = {
@@ -145,10 +149,17 @@ carWidge.prototype.turnRight= function(){ //右转
         window.clearTimeout(_self.stopItR);
     },5000)
 
-}
+};
 
 
-
+carWidge.prototype.introduce = function(){//操作介绍
+    $(".fm93Show,.mod_fm93").fadeIn().find("div").show();
+    //事件注销
+    $(".run,.drink,.smoking,.slow,.fast,.car_steering").off("click");
+    //$(".run").hide().addClass("introduce").fadeIn(1000);
+    $("body").off("swipeleft");
+    $("body").off("swiperight");
+};
 
 carWidge.prototype.loadingPart2 = function() { //斑马线场景
     var _self =this;
@@ -256,7 +267,7 @@ carWidge.prototype.bindEvent = function(){
     });
 }
 
-carWidge.prototype.resetIt = function(){
+carWidge.prototype.resetIt = function(){//重置场景
     $(".drink,.smoking").removeClass("zoomInBig").removeAttr("style");
     $(".road_two_bg").addClass("dn");
 }
