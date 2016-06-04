@@ -21,8 +21,14 @@ function getAnimate(parentClass,element,x,delay,index,hideTime,callBack) {
 
 };
 
-function showshine(dElement,repeatTimes,displayTime){
-    $("."+dElement).hide().addClass("introduce").fadeIn(1000);
+function showshine(dElement,runTime,callBack){
+    var tunTimesTwo = setTimeout(function(){
+        $("."+dElement).hide().addClass("introduce").fadeIn(500);
+        if(typeof(callBack) == "function"){//如果回调函数存在，则执行回调
+            callBack();
+        }
+        window.clearTimeout(tunTimesTwo);
+    },runTime);
 };
 
 function carWidge(option){
@@ -34,7 +40,6 @@ function carWidge(option){
         "start_nb":0
     };
     _self.setting = $.extend({}, _self.setting, option);
-    _self.bindEvent();
 }
 
 carWidge.prototype.loadingSene = function(seneClass,elements,animates,times,hideTime,callBack){ //导入第一场景
@@ -153,12 +158,21 @@ carWidge.prototype.turnRight= function(){ //右转
 
 
 carWidge.prototype.introduce = function(){//操作介绍
+    var _self = this;
     $(".fm93Show,.mod_fm93").fadeIn().find("div").show();
-    //事件注销
-    $(".run,.drink,.smoking,.slow,.fast,.car_steering").off("click");
-    //$(".run").hide().addClass("introduce").fadeIn(1000);
-    $("body").off("swipeleft");
-    $("body").off("swiperight");
+    showshine("run",1000);
+    showshine("car_steering",3000);
+    showshine("slow",5000);
+    showshine("fast",6000);
+    showshine("smoking",8000);
+    showshine("drink",10000,function(){
+        var toLoadingPart = setTimeout(function(){
+            $(".run,.drink,.smoking,.slow,.fast,.car_steering").removeClass("introduce");
+            window.clearTimeout(toLoadingPart);
+            _self.loadingSene(".mod_road_one,.mod_one","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0");//导入第一个场景
+            _self.bindEvent();
+        },2000);
+    });
 };
 
 carWidge.prototype.loadingPart2 = function() { //斑马线场景
