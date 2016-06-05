@@ -53,6 +53,7 @@ function carWidge(option){
     };
     _self.setting = $.extend({}, _self.setting, option);
     _self.ErrorData = [];
+    _self.resultData = 100;
 }
 
 carWidge.prototype.loadingSene = function(seneClass,elements,animates,times,hideTime,callBack){ //导入第一场景
@@ -220,6 +221,7 @@ carWidge.prototype.loadingPart3 = function() { //超车场景
             $(".otherCar").addClass("fadeOutDownBig animated");
             var loadingToFour = setTimeout(function(){
                 _self.loadingPart4();
+                $(".drink").removeClass("turenLeftIt");
                 window.clearTimeout(loadingToFour);
             },8000);
             window.clearTimeout( setTimes );
@@ -251,16 +253,22 @@ carWidge.prototype.loadingPart5 = function() { //限速
     _self.resetIt();
     _self.loadingSene(".mod_five,.mod_road_Two","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
         var loadingToFive= setTimeout(function(){
-            _self.loadingPart6();
+            _self.loadingPartsix();
             window.clearTimeout(loadingToFive);
         },8000);
     });
 }
 
-carWidge.prototype.loadingPart6 = function() { //老婆电话
+carWidge.prototype.loadingPartsix = function() { //老婆电话
     var _self =this;
     _self.resetIt();
     _self.loadingSene(".mod_6,.mod_road_Two","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
+        $(".iphoneOk,.iphoneNot").on("click",function(){
+            $(".iphone").addClass("dn");
+        });
+        $(".iphoneOk").on("click",function(){
+            $(".iphone").addClass("dn");
+        });
         var loadingTo6 = setTimeout(function(){
             _self.loadingPart7();
             window.clearTimeout(loadingTo6);
@@ -286,11 +294,30 @@ carWidge.prototype.loadingPart8 = function() { //接老婆
     _self.resetIt();
     showshine("slow",500,2500,0);
     _self.loadingSene(".mod_8,.mod_road_8","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
-        var loadingTo8 = setTimeout(function(){
-            //_self.loadingPart7();
-            window.clearTimeout(loadingTo8);
-        },8000);
+        $(".slow").on("click",function(){
+            _self.loadingPart9();
+            $(".drink").removeClass("turenLeftIt");
+        });
     });
+}
+
+carWidge.prototype.loadingPart9 = function() { //结果页
+    var _self =this;
+    _self.resetIt();
+    $(".mod_result").removeClass("dn");
+    $(".shareButton").on("click",function(){
+        _self.loadingPart10();
+    })
+    $(".testOne").on("click",function(){
+        window.location.reload();
+    })
+}
+
+carWidge.prototype.loadingPart10 = function() { //分享页
+    var _self =this;
+    _self.resetIt();
+    $(".mod_result").addClass("dn");
+    $(".shareBox").removeClass("dn");
 }
 
 
@@ -318,14 +345,17 @@ carWidge.prototype.bindEvent = function(){
         }else{
             $(this).addClass("zoomInBig").css({"z-index":"10"})
         }
+        _self.resultData = _self.resultData-10;
     });
     $("body").on("swipeleft",function(){ //右滑操作
         if($(".drink").hasClass("noDrink") && !$(".drink").hasClass("drinkIsOut")){//饮料外仍
             if($(".drink").hasClass("drinkIsOut")){
                 _self.turnLeft();
+            }else{
+                $(".drink_not").addClass("dn");
+                $(".drink").removeClass("zoomInBig").addClass("drinkOutLeft").addClass("drinkIsOut");
+                _self.resultData = _self.resultData-10;
             }
-            $(".drink_not").addClass("dn");
-            $(".drink").removeClass("zoomInBig").addClass("drinkOutLeft").addClass("drinkIsOut");
         }else{
             _self.turnLeft();
         }
@@ -334,12 +364,15 @@ carWidge.prototype.bindEvent = function(){
         if($(".drink").hasClass("noDrink") && !$(".drink").hasClass("drinkIsOut")){//饮料外仍
             if($(".drink").hasClass("drinkIsOut")){
                 _self.turnRight();
+            }else{
+                $(".drink_not").addClass("dn");
+                $(".drink").removeClass("zoomInBig").addClass("drinkOutRight").addClass("drinkIsOut");
+                _self.resultData = _self.resultData-10;
             }
-            $(".drink_not").addClass("dn");
-            $(".drink").removeClass("zoomInBig").addClass("drinkOutRight").addClass("drinkIsOut");
         }else{
             _self.turnRight();
         }
+        _self.resultData = _self.resultData-10;
     });
 }
 

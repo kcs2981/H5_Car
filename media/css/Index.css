@@ -8,6 +8,8 @@ body{font-size:62.5%;}
 .hp_txt{width:80%; height: 11.5%; background: url("../images/hp_txt.png") no-repeat; background-size:100% 100%; position: absolute; top: 20%; left: 50%; margin-left:-40%;}
 .game_start{ background: url("../images/start_pic.jpg") no-repeat; background-size:100% 100%; z-index: 998;}
 .start_button{width:29.3%; height: 17.8%; display:block; position: absolute; bottom:11.8%; left:36.2%;}
+.mod_result,.shareBox{ position:fixed; width: 100%; height: 100%; top: 0; left:0; bottom:0; right:0; z-index: 1100; background: url("../images/result.jpg"); background-size:100% 100%;}
+.shareBox{ background: url("../images/share.png"); background-size:100% 100%;}
 
 
 /*--------------------------------reset css------------------------------*/
@@ -67,7 +69,7 @@ li.bor_b_n{ border-bottom:none!important;}
 
 /*-------mod_two-----------*/
 .weChat{width:59%; height:16.7%; position: absolute; top:19%; left:3%; background: url("../images/wechat.png") no-repeat; background-size:100% 100%; z-index:5;}
-.people{width:10.8%; height:30.9%; position: absolute; top:11.73%; left:17.5%; background: url("../images/people.png") no-repeat; background-size:100% 100%; z-index:5;}
+.people{width:10.8%; height:30.9%; position: absolute; top:11.73%; right:17.5%; background: url("../images/people.png") no-repeat; background-size:100% 100%; z-index:5;}
 .light{width:8.7%; height:44.5%; position: absolute; top:0; left:9.7%; background: url("../images/hld.png") no-repeat; background-size:100% 100%; z-index:5;}
 .otherCar{width:22.7%; height:61%; position: absolute; top:0; left:31.5%; background: url("../images/otherCar.png") no-repeat; background-size:100% 100%; z-index:2;}
 .limit_40{width:8.2%; height:39.3%; position: absolute; top:3%; right:9%; background: url("../images/limit_40.png") no-repeat; background-size:100% 100%; z-index:2;}
@@ -75,6 +77,15 @@ li.bor_b_n{ border-bottom:none!important;}
 .no_left{width:10%; height:56%; position: absolute; top:0; left:24%; background: url("../images/no_left.png") no-repeat; background-size:100% 100%; z-index:2;}
 .lp{width:28%; height:66.4%; position: absolute; top:0; right:2.6%; background: url("../images/lp.png") no-repeat; background-size:100% 100%; z-index:2;}
 .bus{width:18.6%; height:22.7%; position: absolute; top:0; right:26%; background: url("../images/bus.png") no-repeat; background-size:100% 100%; z-index:2;}
+.result{ position: absolute; top:35%; left:21%;font-size: 50px; color: #be4334;}
+.persent{ position: absolute; top:50%; left:20%;font-size: 50px; color:#000;}
+.r_text{ position: absolute; top:75%; left:35%;font-size:30px; font-weight:600; color:#000;}
+.shareNb{ position: absolute; bottom:17.5%; right:16%;font-size:50px; font-weight:600; color:#000;}
+.shareButton{width:24.3%; height:15.6%; position: absolute; bottom:38%; right:2%; cursor:pointer}
+.testOne{width:24.3%; height:15.6%; position: absolute; bottom:55.74%; right:2%; cursor:pointer}
+.iphoneOk,.iphoneNot{width:18.9%; height:18%; position: absolute; top:41.5%; left:18.85%; cursor:pointer}
+.iphoneNot{left:62.3%;}
+
 /*----------car control--------*/
 .introduce{margin:0 0 -50px -50px;  padding:50px;}
 .img_100P{width:100%; height: 100%;}
