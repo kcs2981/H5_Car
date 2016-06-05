@@ -51,6 +51,8 @@ function carWidge(option){
         "time":400,
         "start_nb":0
     };
+    _self.leftArray = ["media/images/leftG.png","media/images/left_Slow.gif?112","media/images/left_SlowC.gif?112","media/images/left_Fast.gif?112"];
+    _self.rightArray = ["media/images/rightG.png","media/images/right_Slow.gif?112","media/images/right_SlowC.gif?112","media/images/right_Fast.gif?112"];
     _self.setting = $.extend({}, _self.setting, option);
     _self.ErrorData = [];
     _self.resultData = 100;
@@ -81,6 +83,9 @@ carWidge.prototype.runCar = function(){ //开车
     //runIt();
     _self.setting.start_nb = 1;
     _self.setting.element.attr("src",_self.setting.picArray[_self.setting.start_nb]);//路面第一档
+    $(".road_left_part img").attr("src",_self.leftArray[_self.setting.start_nb]);//路面第一档
+    $(".road_right_part img").attr("src",_self.rightArray[_self.setting.start_nb]);//路面第一档
+
     var loadingToOne = setTimeout(function(){
         _self.loadingPart2();
         $(".mod_fm93").empty().remove();
@@ -109,6 +114,8 @@ carWidge.prototype.runFast = function(){ //加速
     if(_self.setting.start_nb < 3){
         _self.setting.start_nb ++;
         _self.setting.element.attr("src",_self.setting.picArray[_self.setting.start_nb]);//路面第二、三档
+        $(".road_left_part img").attr("src",_self.leftArray[_self.setting.start_nb]);//路面第二、三档
+        $(".road_right_part img").attr("src",_self.rightArray[_self.setting.start_nb]);//路面第二、三档
     }
 }
 carWidge.prototype.runSlow = function(){ //减速
@@ -116,6 +123,8 @@ carWidge.prototype.runSlow = function(){ //减速
     if(_self.setting.start_nb > 1){
         _self.setting.start_nb --;
         _self.setting.element.attr("src",_self.setting.picArray[_self.setting.start_nb]);//路面第二、三档
+        $(".road_left_part img").attr("src",_self.leftArray[_self.setting.start_nb]);//路面第二、三档
+        $(".road_right_part img").attr("src",_self.rightArray[_self.setting.start_nb]);//路面第二、三档
     }
 }
 
@@ -270,7 +279,7 @@ carWidge.prototype.loadingPartsix = function() { //老婆电话
             $(".iphone").addClass("dn");
         });
         var loadingTo6 = setTimeout(function(){
-            _self.loadingPart7();
+            _self.loadingPart8();
             window.clearTimeout(loadingTo6);
         },8000);
     });
@@ -305,6 +314,7 @@ carWidge.prototype.loadingPart9 = function() { //结果页
     var _self =this;
     _self.resetIt();
     $(".mod_result").removeClass("dn");
+    console.log(_self.ErrorData);
     $(".shareButton").on("click",function(){
         _self.loadingPart10();
     })
@@ -338,23 +348,33 @@ carWidge.prototype.bindEvent = function(){
     });
 
 
-    $(".drink,.smoking").on("click",function(){
+    $(".drink").on("click",function(){
         if($(this).hasClass("zoomInBig")){
             $(".drink_not").addClass("dn");
             $(this).removeClass("zoomInBig").removeAttr("style");
         }else{
             $(this).addClass("zoomInBig").css({"z-index":"10"})
         }
-        _self.resultData = _self.resultData-10;
     });
+
+    $(".smoking").on("click",function(){
+        if($(this).hasClass("zoomInBig")){
+            $(this).removeClass("zoomInBig").removeAttr("style");
+        }else{
+            $(this).addClass("zoomInBig").css({"z-index":"10"})
+        }
+        _self.ErrorData.push("开车吸烟");
+    });
+
     $("body").on("swipeleft",function(){ //右滑操作
         if($(".drink").hasClass("noDrink") && !$(".drink").hasClass("drinkIsOut")){//饮料外仍
             if($(".drink").hasClass("drinkIsOut")){
                 _self.turnLeft();
+                _self.ErrorData.push("禁止左拐的地方左拐了");
             }else{
                 $(".drink_not").addClass("dn");
                 $(".drink").removeClass("zoomInBig").addClass("drinkOutLeft").addClass("drinkIsOut");
-                _self.resultData = _self.resultData-10;
+                _self.ErrorData.push("乱扔饮料");
             }
         }else{
             _self.turnLeft();
@@ -367,7 +387,7 @@ carWidge.prototype.bindEvent = function(){
             }else{
                 $(".drink_not").addClass("dn");
                 $(".drink").removeClass("zoomInBig").addClass("drinkOutRight").addClass("drinkIsOut");
-                _self.resultData = _self.resultData-10;
+                _self.ErrorData.push("乱扔饮料");
             }
         }else{
             _self.turnRight();
