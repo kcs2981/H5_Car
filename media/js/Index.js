@@ -1,4 +1,6 @@
 $(function(){
+    var w_width = $(window).width();
+    var w_height =$(window).height();
     var kkk = new carWidge({//new一个carWidge实例
         "picArray":["media/images/run1.png","media/images/runRoadSlow.gif?112","media/images/runRoadSlowC.gif?112","media/images/runRoadFast.gif?112"],
         "element":$("#run_img"),
@@ -9,6 +11,13 @@ $(function(){
     var on_off = false;
     var imgHight = -$(".fakeloader").find("img").innerHeight()/2 +"px";
     function changeBgsize(){
+        $("body").css({"width":w_width,"height":w_height});
+        //if(w_width/w_height > 134/75){
+        //    $(".car_content,.index_bg").css({"width":w_width,"height":w_width*75/134,"margin-top":(w_height -w_width*75/134)/2});
+        //}else{
+        //    $(".car_content,.index_bg").css({"width":w_height*134/75,"height":w_height,"margin-left":(w_width -w_height*134/75)/2});
+        //}
+
         if (window.orientation == 0 || window.orientation == 180) {
             $(".car_content").remove();
             on_off = false;
@@ -39,6 +48,6 @@ $(function(){
         $(".game_start").fadeOut(500);
         kkk.introduce();
         //kkk.loadingSene(".mod_road_one,.mod_one","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0");//导入第一个场景
-        ////kkk.loadingPart2();
+        //kkk.loadingPart6();
     });
 });

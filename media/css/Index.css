@@ -38,7 +38,7 @@ blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 .ds_b{ display:block!important;}
 .v_h{visibility: hidden;}
 .col_f{color:#fff;}
-body{font:14px/1.5em "Arial","SimHei","黑体","Microsoft YaHei","微软雅黑";background:#334455; overflow: hidden; zoom:1;}
+body{font:14px/1.5em "Arial","SimHei","黑体","Microsoft YaHei","微软雅黑";background:#334455;width:100%; height:100%; overflow: hidden; zoom:1;}
 li.bor_b_n{ border-bottom:none!important;}
 .pos_r{ position:relative;}.pos_a{ position:absolute;}.hide{visibility: hidden;}.txtOut{text-indent:-99999em;}
 
@@ -53,6 +53,8 @@ li.bor_b_n{ border-bottom:none!important;}
 .mod_car_img{width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0; background:url("../images/car_control.png") no-repeat; background-size:100% 100%; z-index:3;}
 .mod_road_bg{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0; background:url("../images/road.png") no-repeat; background-size:100% 100%; z-index:0;}
 .road_two_bg{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0;background:url("../images/road_bmx.png") no-repeat; background-size:100% 100%; z-index: 2;}
+.road_noLeft_bg{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0;background:url("../images/road_zc.png") no-repeat; background-size:100% 100%; z-index: 2;}
+.road_left_bg{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0;background:url("../images/road_xd.png") no-repeat; background-size:100% 100%; z-index: 2;}
 .road_run{ position: absolute; left: 51%; top: 0; bottom:0; right: 0; z-index: 1;}
 .road_run img{ height:100%; display: block;}
 
@@ -68,7 +70,11 @@ li.bor_b_n{ border-bottom:none!important;}
 .people{width:10.8%; height:30.9%; position: absolute; top:11.73%; left:17.5%; background: url("../images/people.png") no-repeat; background-size:100% 100%; z-index:5;}
 .light{width:8.7%; height:44.5%; position: absolute; top:0; left:9.7%; background: url("../images/hld.png") no-repeat; background-size:100% 100%; z-index:5;}
 .otherCar{width:22.7%; height:61%; position: absolute; top:0; left:31.5%; background: url("../images/otherCar.png") no-repeat; background-size:100% 100%; z-index:2;}
-
+.limit_40{width:8.2%; height:39.3%; position: absolute; top:3%; right:9%; background: url("../images/limit_40.png") no-repeat; background-size:100% 100%; z-index:2;}
+.iphone{width:25.7%; height:48.3%; position: absolute; top:0%; left:12.7%; background: url("../images/iphone.png") no-repeat; background-size:100% 100%; z-index:6;}
+.no_left{width:10%; height:56%; position: absolute; top:0; left:24%; background: url("../images/no_left.png") no-repeat; background-size:100% 100%; z-index:2;}
+.lp{width:28%; height:66.4%; position: absolute; top:0; right:2.6%; background: url("../images/lp.png") no-repeat; background-size:100% 100%; z-index:2;}
+.bus{width:18.6%; height:22.7%; position: absolute; top:0; right:26%; background: url("../images/bus.png") no-repeat; background-size:100% 100%; z-index:2;}
 /*----------car control--------*/
 .introduce{margin:0 0 -50px -50px;  padding:50px;}
 .img_100P{width:100%; height: 100%;}

@@ -21,14 +21,26 @@ function getAnimate(parentClass,element,x,delay,index,hideTime,callBack) {
 
 };
 
-function showshine(dElement,runTime,callBack){
-    var tunTimesTwo = setTimeout(function(){
+function showshine(dElement,repitTime,runTime,showTime,callBack){
+    var ripitTimes;
+    function shineRipit(){
         $("."+dElement).hide().addClass("introduce").fadeIn(500);
-        if(typeof(callBack) == "function"){//如果回调函数存在，则执行回调
-            callBack();
-        }
-        window.clearTimeout(tunTimesTwo);
-    },runTime);
+        ripitTimes = setTimeout(function(){
+            shineRipit();
+        },repitTime);
+    }
+    var showTimes = setTimeout(function(){
+        shineRipit();
+        var tunTimesTwo = setTimeout(function(){
+            if(typeof(callBack) == "function"){//如果回调函数存在，则执行回调
+                callBack();
+            }
+            window.clearTimeout(ripitTimes);
+            window.clearTimeout(showTimes);
+            window.clearTimeout(tunTimesTwo);
+        },runTime);
+    },showTime)
+
 };
 
 function carWidge(option){
@@ -40,6 +52,7 @@ function carWidge(option){
         "start_nb":0
     };
     _self.setting = $.extend({}, _self.setting, option);
+    _self.ErrorData = [];
 }
 
 carWidge.prototype.loadingSene = function(seneClass,elements,animates,times,hideTime,callBack){ //导入第一场景
@@ -61,6 +74,7 @@ carWidge.prototype.loadingSene = function(seneClass,elements,animates,times,hide
 carWidge.prototype.runCar = function(){ //开车
     var _self = this;
     _self.resetIt();
+    $(".run").removeClass("introduce");
     _self.loadingSene(".fm93Show,.mod_fm93","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","200,200,200,1500","0,0,0,0");
     //var picLength = _self.setting.picArray.length;
     //runIt();
@@ -160,16 +174,18 @@ carWidge.prototype.turnRight= function(){ //右转
 carWidge.prototype.introduce = function(){//操作介绍
     var _self = this;
     $(".fm93Show,.mod_fm93").fadeIn().find("div").show();
-    showshine("run",1000);
-    showshine("car_steering",3000);
-    showshine("slow",5000);
-    showshine("fast",6000);
-    showshine("smoking",8000);
-    showshine("drink",10000,function(){
+    showshine("run",500,1500,500);
+    showshine("car_steering",500,1500,2500);
+    showshine("slow",500,1500,4500);
+    showshine("fast",500,1500,6500);
+    showshine("smoking",500,1500,8500);
+    showshine("drink",500,1500,10500,function(){
         var toLoadingPart = setTimeout(function(){
             $(".run,.drink,.smoking,.slow,.fast,.car_steering").removeClass("introduce");
             window.clearTimeout(toLoadingPart);
-            _self.loadingSene(".mod_road_one,.mod_one","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0");//导入第一个场景
+            _self.loadingSene(".mod_road_one,.mod_one","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
+                showshine("run",500,2500,500);
+            });//导入第一个场景
             _self.bindEvent();
         },2000);
     });
@@ -178,6 +194,7 @@ carWidge.prototype.introduce = function(){//操作介绍
 carWidge.prototype.loadingPart2 = function() { //斑马线场景
     var _self =this;
     _self.resetIt();
+    showshine("slow",500,2500,2000);
     $(".drink").addClass("drink_1");
     $(".road_two_bg").removeClass("dn");
     _self.loadingSene(".mod_road_Two,.mod_two","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
@@ -196,6 +213,7 @@ carWidge.prototype.loadingPart2 = function() { //斑马线场景
 carWidge.prototype.loadingPart3 = function() { //超车场景
     var _self =this;
     _self.resetIt();
+    $(".slow").removeClass("introduce");
     $(".drink").removeClass("drink_1").addClass("drink_2");
     _self.loadingSene(".mod_three,.fm93Show","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
         var setTimes = setTimeout(function(){
@@ -203,7 +221,7 @@ carWidge.prototype.loadingPart3 = function() { //超车场景
             var loadingToFour = setTimeout(function(){
                 _self.loadingPart4();
                 window.clearTimeout(loadingToFour);
-            },5000);
+            },8000);
             window.clearTimeout( setTimes );
         },5000)
     });
@@ -224,11 +242,55 @@ carWidge.prototype.loadingPart4 = function() { //可乐喝完场景
             $(".mod_three").empty().remove();
             _self.loadingPart5();
             window.clearTimeout(loadingToFive);
-        },5000);
+        },8000);
     },5000);
 }
 
-carWidge.prototype.loadingPart5 = function() { //禁止左转
+carWidge.prototype.loadingPart5 = function() { //限速
+    var _self =this;
+    _self.resetIt();
+    _self.loadingSene(".mod_five,.mod_road_Two","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
+        var loadingToFive= setTimeout(function(){
+            _self.loadingPart6();
+            window.clearTimeout(loadingToFive);
+        },8000);
+    });
+}
+
+carWidge.prototype.loadingPart6 = function() { //老婆电话
+    var _self =this;
+    _self.resetIt();
+    _self.loadingSene(".mod_6,.mod_road_Two","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
+        var loadingTo6 = setTimeout(function(){
+            _self.loadingPart7();
+            window.clearTimeout(loadingTo6);
+        },8000);
+    });
+}
+
+
+carWidge.prototype.loadingPart7 = function() { //禁止左转
+    var _self =this;
+    _self.resetIt();
+    $(".mod_road_bg").addClass("road_noLeft_bg");
+    _self.loadingSene(".mod_7","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
+        var loadingTo7 = setTimeout(function(){
+            _self.loadingPart8();
+            window.clearTimeout(loadingTo7);
+        },8000);
+    });
+}
+
+carWidge.prototype.loadingPart8 = function() { //接老婆
+    var _self =this;
+    _self.resetIt();
+    showshine("slow",500,2500,0);
+    _self.loadingSene(".mod_8,.mod_road_8","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
+        var loadingTo8 = setTimeout(function(){
+            //_self.loadingPart7();
+            window.clearTimeout(loadingTo8);
+        },8000);
+    });
 }
 
 
@@ -284,6 +346,7 @@ carWidge.prototype.bindEvent = function(){
 carWidge.prototype.resetIt = function(){//重置场景
     $(".drink,.smoking").removeClass("zoomInBig").removeAttr("style");
     $(".road_two_bg").addClass("dn");
+    $(".mod_road_bg").removeClass("road_noLeft_bg");
 }
 
 
