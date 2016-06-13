@@ -84,7 +84,8 @@ li.bor_b_n{ border-bottom:none!important;}
 .shareButton{width:24.3%; height:15.6%; position: absolute; bottom:38%; right:2%; cursor:pointer}
 .testOne{width:24.3%; height:15.6%; position: absolute; bottom:55.74%; right:2%; cursor:pointer}
 .iphoneOk,.iphoneNot{width:18.9%; height:18%; position: absolute; top:41.5%; left:18.85%; cursor:pointer}
-.iphoneNot{left:62.3%;}
+.iphoneOk{left:62.3%;}
+.infoTxt{width:48%; height:21%; position: absolute; top:0; left:50%; margin-left:-24%; background: url("../images/txt01.png") no-repeat; background-size:100% 100%; z-index:6;}
 
 /*----------car control--------*/
 .introduce{margin:0 0 -50px -50px;  padding:50px;}
