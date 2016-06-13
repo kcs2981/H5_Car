@@ -108,6 +108,8 @@ carWidge.prototype.stopCar = function(){//停车
     var _self = this;
     _self.setting.start_nb = 0;
     _self.setting.element.attr("src",_self.setting.picArray[_self.setting.start_nb]);//停车
+    $(".road_left_part img").attr("src",_self.leftArray[_self.setting.start_nb]);//路面第二、三档
+    $(".road_right_part img").attr("src",_self.rightArray[_self.setting.start_nb]);//路面第二、三档
 };
 carWidge.prototype.runFast = function(){ //加速
     var _self =this;
@@ -279,7 +281,7 @@ carWidge.prototype.loadingPartsix = function() { //老婆电话
             $(".iphone").addClass("dn");
         });
         var loadingTo6 = setTimeout(function(){
-            _self.loadingPart8();
+            _self.loadingPart7();
             window.clearTimeout(loadingTo6);
         },8000);
     });
@@ -304,6 +306,7 @@ carWidge.prototype.loadingPart8 = function() { //接老婆
     showshine("slow",500,2500,0);
     _self.loadingSene(".mod_8,.mod_road_8","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
         $(".slow").on("click",function(){
+            _self.stopCar();
             _self.loadingPart9();
             $(".drink").removeClass("turenLeftIt");
         });
