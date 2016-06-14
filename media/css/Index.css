@@ -3,17 +3,17 @@
 body{font-size:62.5%;}
 .fakeloader,.index_bg,.game_start,.agreement{ position:fixed; width: 100%; height: 100%; top: 0; left:0; bottom:0; right:0; z-index: 999; background: #334455;}
 .fakeloader img{display: block; width:38%; position: relative; top: 50%; left: 50%; margin-left:-19%;}
-.index_bg{background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/hp_repit_x.png") repeat-x #fff; background-size: auto 100%;z-index: 1000;}
-.hp_pic{ width:83%; height: 36.5%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/hp_pic.png") no-repeat; background-size:100% 100%; position: absolute; bottom:26.5%; left:0;}
-.hp_txt{width:80%; height: 11.5%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/hp_txt.png") no-repeat; background-size:100% 100%; position: absolute; top: 20%; left: 50%; margin-left:-40%;}
-.game_start{ background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/start_pic.jpg") no-repeat; background-size:100% 100%; z-index: 998;}
+.index_bg{background: url("../images/hp_repit_x.png") repeat-x #fff; background-size: auto 100%;z-index: 1000;}
+.hp_pic{ width:83%; height: 36.5%; background: url("../images/hp_pic.png") no-repeat; background-size:100% 100%; position: absolute; bottom:26.5%; left:0;}
+.hp_txt{width:80%; height: 11.5%; background: url("../images/hp_txt.png") no-repeat; background-size:100% 100%; position: absolute; top: 20%; left: 50%; margin-left:-40%;}
+.game_start{ background: url("../images/start_pic.jpg") no-repeat; background-size:100% 100%; z-index: 998;}
 .start_button{width:29.3%; height: 17.8%; display:block; position: absolute; bottom:11.8%; left:36.2%;}
-.agreement{ background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/agreement.jpg") no-repeat; background-size:100% 100%; z-index: 1111;}
+.agreement{ background: url("../images/agreement.jpg") no-repeat; background-size:100% 100%; z-index: 1111;}
 .icon_agree{width:54.1%; height:9.2%; display:block; position: absolute; bottom:5.2%; left:19.3%;cursor: pointer; }
 .shareImg{width:14.85%; height:26.53%; display:block; position: absolute; bottom:6.3%; right:5.3%;cursor: pointer;transform:rotate(9.8deg);  -moz-transform:rotate(9.8deg);-webkit-transform:rotate(9.8deg);}
-.mod_result,.shareBox,.submitBox{ position:fixed; width: 100%; height: 100%; top: 0; left:0; bottom:0; right:0; z-index: 1100; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/result.jpg"); background-size:100% 100%;}
-.shareBox{ background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/share.png"); background-size:100% 100%;}
-.submitBox{position:relative; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/submit.png"); background-size:100% 100%;}
+.mod_result,.shareBox,.submitBox{ position:fixed; width: 100%; height: 100%; top: 0; left:0; bottom:0; right:0; z-index: 1100; background: url("../images/result.jpg"); background-size:100% 100%;}
+.shareBox{ background: url("../images/share.png"); background-size:100% 100%;}
+.submitBox{position:relative; background: url("../images/submit.png"); background-size:100% 100%;}
 .submitInput{width:22.54%; height:8.13%; font-size:12px; border:none; background: none; color:#333; position: absolute; text-indent:24px;}
 .submitIt{width:24.33%; height:15%; display: block; position: absolute; text-indent:-99999em;bottom:17.73%; left:37.24%;}
 input[name="userName"]{top:43.33%; left:22.24%;}
@@ -63,31 +63,31 @@ li.bor_b_n{ border-bottom:none!important;}
 
 /*--------------mod_car--------------*/
 .mod_car{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0; z-index:3;}
-.mod_car_img{width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0; background:url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/car_control.png") no-repeat; background-size:100% 100%; z-index:3;}
-.mod_road_bg{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0; background:url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/road.png") no-repeat; background-size:100% 100%; z-index:0;}
-.road_two_bg{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0;background:url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/road_bmx.png") no-repeat; background-size:100% 100%; z-index: 2;}
-.road_noLeft_bg{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0;background:url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/road_zc.png") no-repeat; background-size:100% 100%; z-index: 2;}
-.road_left_bg{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0;background:url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/road_xd.png") no-repeat; background-size:100% 100%; z-index: 2;}
+.mod_car_img{width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0; background:url("../images/car_control.png") no-repeat; background-size:100% 100%; z-index:3;}
+.mod_road_bg{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0; background:url("../images/road.png") no-repeat; background-size:100% 100%; z-index:0;}
+.road_two_bg{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0;background:url("../images/road_bmx.png") no-repeat; background-size:100% 100%; z-index: 2;}
+.road_noLeft_bg{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0;background:url("../images/road_zc.png") no-repeat; background-size:100% 100%; z-index: 2;}
+.road_left_bg{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0;background:url("../images/road_xd.png") no-repeat; background-size:100% 100%; z-index: 2;}
 .road_run{ position: absolute; left: 51%; height:100%; top: 0; bottom:0; right: 0; z-index: 1; overflow: hidden; zoom:1;}
 .road_run img{ height:100%; display: block;}
 
 /*-------mod_one-----------*/
 .mod_roads{width:100%; height:100%; position: relative; top: 0; left: 0; right: 0; bottom:0;}
-.fm93_banner{width:16.04%; height: 29.6%; position: absolute; top: 0; right:18.29%; z-index:5; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/fm93.png?061422") no-repeat; background-size:100% 100%;}
+.fm93_banner{width:16.04%; height: 29.6%; position: absolute; top: 0; right:18.29%; z-index:5; background: url("../images/fm93.png?061422") no-repeat; background-size:100% 100%;}
 .mod_roads .road_left_part{ height:100%; width: 45.12%; display:inline-block; }
 .mod_roads .road_right_part{ height:100%; width: 49.47%; display:inline-block; }
 .mod_roads .road_left_part img,.mod_roads .road_right_part img{width:100%;height:100%; display: block}
 
 /*-------mod_two-----------*/
-.weChat{width:61.5%; height:16.7%; position: absolute; top:19%; left:3%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/wechat.png") no-repeat; background-size:100% 100%; z-index:5;}
-.people{width:10.8%; height:30.9%; position: absolute; top:11.73%; right:17.5%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/people.png") no-repeat; background-size:100% 100%; z-index:5;}
-.light{width:8.7%; height:44.5%; position: absolute; top:0; left:9.7%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/hld.png") no-repeat; background-size:100% 100%; z-index:5;}
-.otherCar{width:22.7%; height:61%; position: absolute; top:0; left:31.5%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/otherCar.png") no-repeat; background-size:100% 100%; z-index:2;}
-.limit_40{width:8.2%; height:39.3%; position: absolute; top:3%; right:9%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/limit_40.png") no-repeat; background-size:100% 100%; z-index:2;}
-.iphone{width:25.7%; height:48.3%; position: absolute; top:0%; left:12.7%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/iphone.png") no-repeat; background-size:100% 100%; z-index:6;}
-.no_left{width:10%; height:56%; position: absolute; top:0; left:24%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/no_left.png") no-repeat; background-size:100% 100%; z-index:2;}
-.lp{width:28%; height:66.4%; position: absolute; top:0; right:2.6%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/lp.png") no-repeat; background-size:100% 100%; z-index:2;}
-.bus{width:23.8%; height:30.8%; position: absolute; top:0; right:26%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/bus.png?112") no-repeat; background-size:100% 100%; z-index:2;}
+.weChat{width:61.5%; height:16.7%; position: absolute; top:19%; left:3%; background: url("../images/wechat.png") no-repeat; background-size:100% 100%; z-index:5;}
+.people{width:10.8%; height:30.9%; position: absolute; top:11.73%; right:17.5%; background: url("../images/people.png") no-repeat; background-size:100% 100%; z-index:5;}
+.light{width:8.7%; height:44.5%; position: absolute; top:0; left:9.7%; background: url("../images/hld.png") no-repeat; background-size:100% 100%; z-index:5;}
+.otherCar{width:22.7%; height:61%; position: absolute; top:0; left:31.5%; background: url("../images/otherCar.png") no-repeat; background-size:100% 100%; z-index:2;}
+.limit_40{width:8.2%; height:39.3%; position: absolute; top:3%; right:9%; background: url("../images/limit_40.png") no-repeat; background-size:100% 100%; z-index:2;}
+.iphone{width:25.7%; height:48.3%; position: absolute; top:0%; left:12.7%; background: url("../images/iphone.png") no-repeat; background-size:100% 100%; z-index:6;}
+.no_left{width:10%; height:56%; position: absolute; top:0; left:24%; background: url("../images/no_left.png") no-repeat; background-size:100% 100%; z-index:2;}
+.lp{width:28%; height:66.4%; position: absolute; top:0; right:2.6%; background: url("../images/lp.png") no-repeat; background-size:100% 100%; z-index:2;}
+.bus{width:23.8%; height:30.8%; position: absolute; top:0; right:26%; background: url("../images/bus.png?112") no-repeat; background-size:100% 100%; z-index:2;}
 .result{ position: absolute; top:34%; left:21%;font-size:25px; color: #be4334;font-weight:600!important;}
 .persent{ position: absolute; top:48%; left:18%;font-size: 25px; color:#000;font-weight:600!important;}
 .r_text{ position: absolute;width:32.1%; top:72%; left:9%;font-size:16px; font-weight:600!important; color:#000;}
@@ -97,37 +97,37 @@ li.bor_b_n{ border-bottom:none!important;}
 .joinUs{width:24.03%; height:19%; position: absolute; bottom:27.33%; left:47%; cursor:pointer}
 .iphoneOk,.iphoneNot{width:18.9%; height:18%; position: absolute; top:41.5%; left:18.85%; cursor:pointer}
 .iphoneOk{left:62.3%;}
-.infoTxt{width:48%; height:21%; position: absolute; top:0; left:50%; margin-left:-24%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/txt01.png") no-repeat; background-size:100% 100%; z-index:120000;}
-.jt{width:9.4%; height:30.8%; position: absolute; top:5%; right:41.4%; margin-left:-24%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/jt.png") no-repeat; background-size:100% 100%; z-index:6;}
-.jt.introduce{background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/jt_h.png?112") no-repeat;background-size:100% 100%;margin:-3.7% -3.7% 0 0;}
+.infoTxt{width:48%; height:21%; position: absolute; top:0; left:50%; margin-left:-24%; background: url("../images/txt01.png") no-repeat; background-size:100% 100%; z-index:120000;}
+.jt{width:9.4%; height:30.8%; position: absolute; top:5%; right:41.4%; margin-left:-24%; background: url("../images/jt.png") no-repeat; background-size:100% 100%; z-index:6;}
+.jt.introduce{background: url("../images/jt_h.png?112") no-repeat;background-size:100% 100%;margin:-3.7% -3.7% 0 0;}
 
 /*----------car control--------*/
 .introduce{margin:0 0 -3.7% -3.7%;  padding:3.7%;}
 .img_100P{width:100%; height: 100%;}
 .car_mirror{width:38%; height:31%; position: absolute; top: 0; right: 2.2%; z-index: 4;}
-.car_steering{width:46.5%; height:83%; position: absolute; bottom:-40%; left: 17%; z-index: 5; background:url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/steering.png") no-repeat; background-size:100% 100%;}
-.car_steering.introduce{background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/steering_h.png?112") no-repeat;background-size:100% 100%;}
+.car_steering{width:46.5%; height:83%; position: absolute; bottom:-40%; left: 17%; z-index: 5; background:url("../images/steering.png") no-repeat; background-size:100% 100%;}
+.car_steering.introduce{background: url("../images/steering_h.png?112") no-repeat;background-size:100% 100%;}
 .car_left_right{width:7.6%; height:6%; position: absolute; bottom:11%; left: 12%; z-index: 4;}
-.car_left,.car_right{width:2.7%; height:4.5%; position: absolute; bottom:20%; left:31.7%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/left.png") no-repeat; background-size:100% 100%; z-index: 4;}
-.car_right{left:49.3%;background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/right.png") no-repeat; background-size:100% 100%;}
-.car_left.icon_active{background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/left_h.png") no-repeat;background-size:100% 100%;}
-.car_right.icon_active{background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/right_h.png") no-repeat;background-size:100% 100%;}
-.car_icon_start{width:4.78%; height:8.7%; position: absolute; bottom:16%; left:62%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/start.png") no-repeat; background-size:100% 100%; z-index: 4;}
-.car_icon_start.introduce{background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/start_h.png") no-repeat;background-size:100% 100%;}
-.car_fast,.car_slow{width:12.4%; height:23%; position: absolute;  background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/go.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.car_left,.car_right{width:2.7%; height:4.5%; position: absolute; bottom:20%; left:31.7%; background: url("../images/left.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.car_right{left:49.3%;background: url("../images/right.png") no-repeat; background-size:100% 100%;}
+.car_left.icon_active{background: url("../images/left_h.png") no-repeat;background-size:100% 100%;}
+.car_right.icon_active{background: url("../images/right_h.png") no-repeat;background-size:100% 100%;}
+.car_icon_start{width:4.78%; height:8.7%; position: absolute; bottom:16%; left:62%; background: url("../images/start.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.car_icon_start.introduce{background: url("../images/start_h.png") no-repeat;background-size:100% 100%;}
+.car_fast,.car_slow{width:12.4%; height:23%; position: absolute;  background: url("../images/go.png") no-repeat; background-size:100% 100%; z-index: 4;}
 .car_fast{right:2%;bottom:20%; }
-.car_fast.introduce{background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/go_h.png") no-repeat;background-size:100% 100%;margin:0 -3.7% -3.7% 0;}
-.car_slow{left:2%;bottom:20%;  background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/stop.png") no-repeat;background-size:100% 100%;}
-.car_slow.introduce{background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/stop_h.png") no-repeat;background-size:100% 100%;}
-.drink{width:8.9%; height:38.3%; position: absolute; bottom:30%; left:55%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/drink.png") no-repeat; background-size:100% 100%; z-index: 4;}
-.drink.introduce{background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/drink_h.png") no-repeat;background-size:100% 100%;}
-.smoking{width:10.8%; height:10.53%; position: absolute; bottom:26%; left:60%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/smoke.png") no-repeat; background-size:100% 100%; z-index: 4;}
-.smoking.introduce{background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/smoke_h.png") no-repeat;background-size:100% 100%;}
-.rund_speed{width:7%; height:1%; position: absolute; bottom:14%; left:36.5%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/rund_speed.png") no-repeat; background-size:100% 100%; z-index: 4;}
-.speed{width:6%; height:3%; position: absolute; bottom:10%; left:50%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/speed.png") no-repeat; background-size:100% 100%; z-index: 4;}
-.drink_1{background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/drink1.png") no-repeat; background-size:100% 100%;}
-.drink_2{background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/drink2.png") no-repeat; background-size:100% 100%;}
-.drink_3{background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/drink3.png") no-repeat; background-size:100% 100%;}
-.drink_not{width:38.5%; height:50%; position: absolute; bottom:8.3%; left:39%; background: url("http://img01.cztv.com/channel/topics/jt93static4/gooddriver/media/images/drink_not.png") no-repeat; background-size:100% 100%; z-index: 3;}
+.car_fast.introduce{background: url("../images/go_h.png") no-repeat;background-size:100% 100%;margin:0 -3.7% -3.7% 0;}
+.car_slow{left:2%;bottom:20%;  background: url("../images/stop.png") no-repeat;background-size:100% 100%;}
+.car_slow.introduce{background: url("../images/stop_h.png") no-repeat;background-size:100% 100%;}
+.drink{width:8.9%; height:38.3%; position: absolute; bottom:30%; left:55%; background: url("../images/drink.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.drink.introduce{background: url("../images/drink_h.png") no-repeat;background-size:100% 100%;}
+.smoking{width:10.8%; height:10.53%; position: absolute; bottom:26%; left:60%; background: url("../images/smoke.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.smoking.introduce{background: url("../images/smoke_h.png") no-repeat;background-size:100% 100%;}
+.rund_speed{width:7%; height:1%; position: absolute; bottom:14%; left:36.5%; background: url("../images/rund_speed.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.speed{width:6%; height:3%; position: absolute; bottom:10%; left:50%; background: url("../images/speed.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.drink_1{background: url("../images/drink1.png") no-repeat; background-size:100% 100%;}
+.drink_2{background: url("../images/drink2.png") no-repeat; background-size:100% 100%;}
+.drink_3{background: url("../images/drink3.png") no-repeat; background-size:100% 100%;}
+.drink_not{width:38.5%; height:50%; position: absolute; bottom:8.3%; left:39%; background: url("../images/drink_not.png") no-repeat; background-size:100% 100%; z-index: 3;}
 
 
