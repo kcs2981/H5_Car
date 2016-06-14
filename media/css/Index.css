@@ -87,17 +87,19 @@ li.bor_b_n{ border-bottom:none!important;}
 .iphone{width:25.7%; height:48.3%; position: absolute; top:0%; left:12.7%; background: url("../images/iphone.png") no-repeat; background-size:100% 100%; z-index:6;}
 .no_left{width:10%; height:56%; position: absolute; top:0; left:24%; background: url("../images/no_left.png") no-repeat; background-size:100% 100%; z-index:2;}
 .lp{width:28%; height:66.4%; position: absolute; top:0; right:2.6%; background: url("../images/lp.png") no-repeat; background-size:100% 100%; z-index:2;}
-.bus{width:23.8%; height:30.8%; position: absolute; top:0; right:26%; background: url("../images/bus.png") no-repeat; background-size:100% 100%; z-index:2;}
-.result{ position: absolute; top:35%; left:21%;font-size:25px; color: #be4334;}
-.persent{ position: absolute; top:50%; left:20%;font-size: 25px; color:#000;}
-.r_text{ position: absolute;width:32.1%; top:72%; left:9%;font-size:16px; font-weight:600; color:#000;}
-.shareNb{ position: absolute; bottom:17.5%; right:16%;font-size:25px; font-weight:600; color:#000;}
+.bus{width:23.8%; height:30.8%; position: absolute; top:0; right:26%; background: url("../images/bus.png?112") no-repeat; background-size:100% 100%; z-index:2;}
+.result{ position: absolute; top:34%; left:21%;font-size:25px; color: #be4334;font-weight:600!important;}
+.persent{ position: absolute; top:48%; left:18%;font-size: 25px; color:#000;font-weight:600!important;}
+.r_text{ position: absolute;width:32.1%; top:72%; left:9%;font-size:16px; font-weight:600!important; color:#000;}
+.shareNb{ position: absolute; bottom:17.5%; right:16%;font-size:25px; font-weight:600!important; color:#000;}
 .shareButton{width:24.3%; height:15.6%; position: absolute; bottom:38%; right:2%; cursor:pointer}
 .testOne{width:24.3%; height:15.6%; position: absolute; bottom:55.74%; right:2%; cursor:pointer}
 .joinUs{width:24.03%; height:19%; position: absolute; bottom:27.33%; left:47%; cursor:pointer}
 .iphoneOk,.iphoneNot{width:18.9%; height:18%; position: absolute; top:41.5%; left:18.85%; cursor:pointer}
 .iphoneOk{left:62.3%;}
-.infoTxt{width:48%; height:21%; position: absolute; top:0; left:50%; margin-left:-24%; background: url("../images/txt01.png") no-repeat; background-size:100% 100%; z-index:6;}
+.infoTxt{width:48%; height:21%; position: absolute; top:0; left:50%; margin-left:-24%; background: url("../images/txt01.png") no-repeat; background-size:100% 100%; z-index:120000;}
+.jt{width:9.4%; height:30.8%; position: absolute; top:5%; right:41.4%; margin-left:-24%; background: url("../images/jt.png") no-repeat; background-size:100% 100%; z-index:6;}
+.jt.introduce{background: url("../images/jt_h.png?112") no-repeat;background-size:100% 100%;margin:-3.7% -3.7% 0 0;}
 
 /*----------car control--------*/
 .introduce{margin:0 0 -3.7% -3.7%;  padding:3.7%;}

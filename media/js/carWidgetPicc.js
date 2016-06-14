@@ -615,7 +615,7 @@ carWidge.prototype.loadingPart9 = function() { //结果页
             var mobile = $("input[name='Tel']").val();
             $.ajax({
                 type: 'POST',
-                url: 'http://res.jiconglin.com/jt93ask/Scoreinfocomplete?username='+userNmae+'&mobile='+mobile+'&license_plate='+license_plate+'&source=1&vinno='+carLastNb,
+                url: 'http://res.jiconglin.com/jt93ask/Scoreinfocomplete?username='+userNmae+'&mobile='+mobile+'&license_plate='+license_plate+'&source=2&vinno='+carLastNb,
                 dataType: 'jsonp',
                 success: function () {
                     alert("提交成功，信息已收到!");

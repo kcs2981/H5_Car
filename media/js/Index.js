@@ -42,6 +42,6 @@ $(function(){
     $(".start_button").on("click",function(){
         $(".game_start").fadeOut(500);
         kkk.introduce();
-        //kkk.loadingPart5();
+        //kkk.loadingPartaddTwo();
     });
 });
