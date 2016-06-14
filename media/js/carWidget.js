@@ -52,8 +52,8 @@ function carWidge(option){
         "time":400,
         "start_nb":0
     };
-    _self.leftArray = ["media/images/leftG.png","media/images/left_Slow.gif?112","media/images/left_SlowC.gif?112","media/images/left_Fast.gif?112"];
-    _self.rightArray = ["media/images/rightG.png","media/images/right_Slow.gif?112","media/images/right_SlowC.gif?112","media/images/right_Fast.gif?112"];
+    _self.leftArray = ["http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/leftG.png","http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/left_Slow.gif?112","http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/left_SlowC.gif?112","http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/left_Fast.gif?112"];
+    _self.rightArray = ["http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/rightG.png","http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/right_Slow.gif?112","http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/right_SlowC.gif?112","http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/right_Fast.gif?112"];
     _self.setting = $.extend({}, _self.setting, option);
     _self.ErrorData = [];
     _self.resultData = 100;
@@ -217,10 +217,10 @@ carWidge.prototype.loadingPart2 = function() { //斑马线场景
     $(".road_two_bg").removeClass("dn");
     _self.loadingSene(".mod_road_Two,.mod_two","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0");
     $(".slow").one("click",function(){
-        $(".infoTxt").css({"background": "url('media/images/txt05.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+        $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt05.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
         var peoplePartTime = setTimeout(function(){
             $(".infoTxt").removeClass("bounceInUp").addClass("dn");
-            $(".people").css({"background":"url('media/images/people.gif') no-repeat","background-size":"100% 100%"}).addClass("fadeOutRightSlow");
+            $(".people").css({"background":"url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/people.gif') no-repeat","background-size":"100% 100%"}).addClass("fadeOutRightSlow");
             window.clearTimeout(peoplePartTime);
         },4000);
 
@@ -233,7 +233,7 @@ carWidge.prototype.loadingPart2 = function() { //斑马线场景
         _self.bindEvent();
     });
     $(".fast").one("click",function(){
-        $(".infoTxt").css({"background": "url('media/images/txt01.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+        $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt01.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
         _self.resultData = _self.resultData-10;
         var peoplePartTime22 = setTimeout(function(){
             $(".infoTxt").removeClass("bounceInUp").addClass("dn");
@@ -255,7 +255,7 @@ carWidge.prototype.loadingPart3 = function() { //超车场景
     showshine("car_steering",500,1500,2500);
 
     _self.setting.start_nb = 1;
-    _self.setting.element.attr("src","media/images/run_sx.png");//路面实线
+    _self.setting.element.attr("src","http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/run_sx.png");//路面实线
     $(".road_left_part img").attr("src",_self.leftArray[_self.setting.start_nb]);//路面第一档
     $(".road_right_part img").attr("src",_self.rightArray[_self.setting.start_nb]);//路面第一档
 
@@ -264,7 +264,7 @@ carWidge.prototype.loadingPart3 = function() { //超车场景
 
     $(".slow").one("click",function(){
         $(".fm93_banner").addClass("dn");
-        $(".infoTxt").css({"background": "url('media/images/txt13.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+        $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt13.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
         $(".otherCar").addClass("fadeOutDownBig animated");
         var otherCarPartTime = setTimeout(function(){
             $(".infoTxt").removeClass("bounceInUp").addClass("dn");
@@ -280,7 +280,7 @@ carWidge.prototype.loadingPart3 = function() { //超车场景
     $("body").one("swipeleft",function(){ //右滑操作
         $(".fm93_banner").addClass("dn");
         _self.resultData = _self.resultData-10;
-        $(".infoTxt").css({"background": "url('media/images/txt08.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+        $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt08.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
         $(".otherCar").addClass("fadeOutDownBig animated");
         var otherCarPartTime2 = setTimeout(function(){
             window.clearTimeout(otherCarPartTime2);
@@ -295,7 +295,7 @@ carWidge.prototype.loadingPart3 = function() { //超车场景
     $("body").one("swiperight",function(){//左滑操作
         _self.resultData = _self.resultData-10;
         $(".fm93_banner").addClass("dn");
-        $(".infoTxt").css({"background": "url('media/images/txt08.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+        $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt08.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
         $(".otherCar").addClass("fadeOutDownBig animated");
         var otherCarPartTime3 = setTimeout(function(){
             $(".infoTxt").removeClass("bounceInUp").addClass("dn");
@@ -322,7 +322,7 @@ carWidge.prototype.loadingPart4 = function() { //可乐喝完场景
             $(".mod_three").empty().remove();
 
 
-            $(".infoTxt").css({"background": "url('media/images/txt10.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+            $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt10.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
             var drinkPartTime = setTimeout(function(){
                 $(".infoTxt").removeClass("bounceInUp").addClass("dn");
                 window.clearTimeout(drinkPartTime);
@@ -336,7 +336,7 @@ carWidge.prototype.loadingPart4 = function() { //可乐喝完场景
         $("body").one("swipeleft",function(){ //右滑操作
             _self.resultData = _self.resultData-10;
             $(".mod_three").empty().remove();
-            $(".infoTxt").css({"background": "url('media/images/txt12.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+            $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt12.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
             var drinkPartTime2 = setTimeout(function(){
                 $(".infoTxt").removeClass("bounceInUp").addClass("dn");
                 window.clearTimeout(drinkPartTime2);
@@ -347,7 +347,7 @@ carWidge.prototype.loadingPart4 = function() { //可乐喝完场景
         });
         $("body").one("swiperight",function(){//左滑操作
             $(".mod_three").empty().remove();
-            $(".infoTxt").css({"background": "url('media/images/txt10.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+            $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt10.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
             var drinkPartTime3 = setTimeout(function(){
                 $(".infoTxt").removeClass("bounceInUp").addClass("dn");
                 window.clearTimeout(drinkPartTime3);
@@ -376,14 +376,14 @@ carWidge.prototype.loadingPart5 = function() { //限速
     //$(".road_left_part img").attr("src",_self.leftArray[_self.setting.start_nb]);//路面第2档
     //$(".road_right_part img").attr("src",_self.rightArray[_self.setting.start_nb]);//路面第2档
     //
-    //$(".infoTxt").css({"background": "url('media/images/txt11.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+    //$(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt11.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
     //var slowCarPartTime3 = setTimeout(function(){
     //    $(".infoTxt").removeClass("bounceInUp").addClass("dn");
     //    window.clearTimeout(slowCarPartTime3);
     //},4000);
     //
     //$(".fast").one("click",function(){
-    //    $(".infoTxt").css({"background": "url('media/images/txt11.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+    //    $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt11.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
     //    var slowCarPartTime = setTimeout(function(){
     //        $(".infoTxt").removeClass("bounceInUp").addClass("dn");
     //        window.clearTimeout(slowCarPartTime);
@@ -395,7 +395,7 @@ carWidge.prototype.loadingPart5 = function() { //限速
     //
     //
     //$(".slow").one("click",function(){
-    //    $(".infoTxt").css({"background": "url('media/images/txt07.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+    //    $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt07.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
     //    var slowCarPartTime2 = setTimeout(function(){
     //        $(".infoTxt").removeClass("bounceInUp").addClass("dn");
     //        window.clearTimeout(slowCarPartTime2);
@@ -424,7 +424,7 @@ carWidge.prototype.loadingPartsix = function() { //老婆电话
             phoneVideo.pause();
             $(".iphone").addClass("dn");
 
-            $(".infoTxt").css({"background": "url('media/images/txt14.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+            $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt14.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
             var sixPartTime = setTimeout(function(){
                 $(".infoTxt").removeClass("bounceInUp").addClass("dn");
                 window.clearTimeout(sixPartTime);
@@ -440,7 +440,7 @@ carWidge.prototype.loadingPartsix = function() { //老婆电话
             $(".iphone").addClass("dn");
             phoneVideo.pause();
 
-            $(".infoTxt").css({"background": "url('media/images/txt03.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+            $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt03.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
             var sixPartTim2 = setTimeout(function(){
                 $(".infoTxt").removeClass("bounceInUp").addClass("dn");
                 window.clearTimeout(sixPartTim2);
@@ -479,7 +479,7 @@ carWidge.prototype.loadingPart7 = function() { //禁止左转
 
     $(".fast").one("click",function(){
 
-        $(".infoTxt").css({"background": "url('media/images/txt02.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+        $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt02.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
         var noLeftPartTim = setTimeout(function(){
             $(".infoTxt").removeClass("bounceInUp").addClass("dn");
             window.clearTimeout(noLeftPartTim);
@@ -492,7 +492,7 @@ carWidge.prototype.loadingPart7 = function() { //禁止左转
 
     $("body").one("swipeleft",function(){ //左滑操作
         _self.resultData = _self.resultData-10;
-        $(".infoTxt").css({"background": "url('media/images/txt04.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+        $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt04.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
         var noLeftPartTim2 = setTimeout(function(){
             $(".infoTxt").removeClass("bounceInUp").addClass("dn");
             window.clearTimeout(noLeftPartTim2);
@@ -534,18 +534,20 @@ carWidge.prototype.loadingPart8 = function() { //接老婆
     _self.resetIt();
     _self.stopCar();
     $(".slow").off("click");
-    $("body").off("swiperight")
+    $("body").off("swiperight");
+    $("body").off("swipeleft");
     showshine("slow",500,1500,1000);
     showshine("jt",500,1500,2500);
+    showshine("car_steering",500,1500,4000);
     _self.loadingSene(".mod_8,.mod_road_8","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
         $(".slow").one("click",function(){
-            _self.resultData = _self.resultData-10;
-            $(".infoTxt").css({"background": "url('media/images/txt06.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+            $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt06.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
             var noLeftPartTim2 = setTimeout(function(){
                 $(".infoTxt").removeClass("bounceInUp").addClass("dn");
                 window.clearTimeout(noLeftPartTim2);
                 $(".jt").addClass("dn");
                 _self.stopCar();
+                _self.resultData = _self.resultData-10;
                 _self.loadingPart9();
                 $(".drink").removeClass("turenLeftIt");
 
@@ -555,8 +557,43 @@ carWidge.prototype.loadingPart8 = function() { //接老婆
         });
 
 
-        $("body").one("swiperight",function(){//右滑操作
-            $(".infoTxt").css({"background": "url('media/images/txt09.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+        $("body").one("swiperight",".car_steering",function(){//右滑操作
+            _self.turnRight();
+            $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt06.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+            var noLeftPartTim2 = setTimeout(function(){
+                $(".infoTxt").removeClass("bounceInUp").addClass("dn");
+                window.clearTimeout(noLeftPartTim2);
+                $(".jt").addClass("dn");
+                _self.stopCar();
+                _self.resultData = _self.resultData-10;
+                _self.loadingPart9();
+                $(".drink").removeClass("turenLeftIt");
+
+            },4000);
+
+
+        });
+
+        $("body").one("swipeleft",".car_steering",function(){//右滑操作
+            _self.turnLeft();
+            $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt06.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+            var noLeftPartTim2 = setTimeout(function(){
+                $(".infoTxt").removeClass("bounceInUp").addClass("dn");
+                window.clearTimeout(noLeftPartTim2);
+                $(".jt").addClass("dn");
+                _self.stopCar();
+                _self.resultData = _self.resultData-10;
+                _self.loadingPart9();
+                $(".drink").removeClass("turenLeftIt");
+
+            },4000);
+
+
+        });
+
+        $("body").one("swiperight",".jt",function(){//右滑操作
+            _self.turnRight();
+            $(".infoTxt").css({"background": "url('http://img01.cztv.com/channel/topics/jt93static2/gooddriver/media/images/txt09.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
             var noLeftPartTim2 = setTimeout(function(){
                 $(".infoTxt").removeClass("bounceInUp").addClass("dn");
                 window.clearTimeout(noLeftPartTim2);
@@ -584,7 +621,7 @@ carWidge.prototype.loadingPart9 = function() { //结果页
             $(".persent").html(data.data.percent);
             $(".r_text").html(data.data.tip);
             $(".shareNb").html(_self.totalPeople);
-            fenxiang("一个月内无违章，三吨汽油送给你","我的“行商”是"+_self.resultData+"分，已经超过"+data.data.percent+"%的车主，快来测下你的“行商”分","一个月内无违章，三吨汽油送给你"); //百分比根据接口返回的值设置
+            fenxiang("我的“行商”是"+_self.resultData+"分，已经超过"+data.data.percent+"%的车主，快来测下你的“行商”分","一个月内无违章，三吨汽油送给你","我的“行商”是"+_self.resultData+"分，已经超过"+data.data.percent+"%的车主，快来测下你的“行商”分"); //百分比根据接口返回的值设置
             $(".mod_result").removeClass("dn");
         },
         error: function () {
