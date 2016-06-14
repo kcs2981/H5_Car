@@ -9,7 +9,8 @@ body{font-size:62.5%;}
 .game_start{ background: url("../images/start_pic.jpg") no-repeat; background-size:100% 100%; z-index: 998;}
 .start_button{width:29.3%; height: 17.8%; display:block; position: absolute; bottom:11.8%; left:36.2%;}
 .agreement{ background: url("../images/agreement.jpg") no-repeat; background-size:100% 100%; z-index: 1111;}
-.icon_agree{width:54.1%; height:9.2%; display:block; position: absolute; bottom:5.2%; left:19.3%;cursor: pointer;}
+.icon_agree{width:54.1%; height:9.2%; display:block; position: absolute; bottom:5.2%; left:19.3%;cursor: pointer; }
+.shareImg{width:14.85%; height:26.53%; display:block; position: absolute; bottom:6.3%; right:5.3%;cursor: pointer;transform:rotate(9.8deg);  -moz-transform:rotate(9.8deg);-webkit-transform:rotate(9.8deg);}
 .mod_result,.shareBox,.submitBox{ position:fixed; width: 100%; height: 100%; top: 0; left:0; bottom:0; right:0; z-index: 1100; background: url("../images/result.jpg"); background-size:100% 100%;}
 .shareBox{ background: url("../images/share.png"); background-size:100% 100%;}
 .submitBox{position:relative; background: url("../images/submit.png"); background-size:100% 100%;}

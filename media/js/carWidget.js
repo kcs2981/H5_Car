@@ -371,47 +371,47 @@ carWidge.prototype.loadingPart5 = function() { //限速
     _self.resetIt();
     showshine("fast",500,1500,1000);
     showshine("slow",500,1500,2500);
-    _self.loadingSene(".mod_five,.mod_road_Two","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,0","0,0,0,0");
-    _self.setting.start_nb = 2;//限速进来默认第二档。提示超速。根据用户操作扣分；
-    _self.setting.element.attr("src",_self.setting.picArray[_self.setting.start_nb]);//路面第2档
-    $(".road_left_part img").attr("src",_self.leftArray[_self.setting.start_nb]);//路面第2档
-    $(".road_right_part img").attr("src",_self.rightArray[_self.setting.start_nb]);//路面第2档
-
-    $(".infoTxt").css({"background": "url('media/images/txt11.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
-    var slowCarPartTime3 = setTimeout(function(){
-        $(".infoTxt").removeClass("bounceInUp").addClass("dn");
-        window.clearTimeout(slowCarPartTime3);
-    },4000);
-
-    $(".fast").one("click",function(){
-        $(".infoTxt").css({"background": "url('media/images/txt11.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
-        var slowCarPartTime = setTimeout(function(){
-            $(".infoTxt").removeClass("bounceInUp").addClass("dn");
-            window.clearTimeout(slowCarPartTime);
+    _self.loadingSene(".mod_five,.mod_road_Two","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,0","0,0,0,0",function(){
+        var loadingToFive= setTimeout(function(){
             _self.loadingPartsix();
-        },4000);
-        _self.offEvent();
-        _self.bindEvent();
+            window.clearTimeout(loadingToFive);
+        },8000);
     });
-
-
-    $(".slow").one("click",function(){
-        $(".infoTxt").css({"background": "url('media/images/txt07.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
-        var slowCarPartTime2 = setTimeout(function(){
-            $(".infoTxt").removeClass("bounceInUp").addClass("dn");
-            window.clearTimeout(slowCarPartTime2);
-            _self.loadingPartsix();
-        },4000);
-        _self.offEvent();
-        _self.bindEvent();
-    });
-
-    //function(){
-    //    var loadingToFive= setTimeout(function(){
+    //_self.setting.start_nb = 2;//限速进来默认第二档。提示超速。根据用户操作扣分；
+    //_self.setting.element.attr("src",_self.setting.picArray[_self.setting.start_nb]);//路面第2档
+    //$(".road_left_part img").attr("src",_self.leftArray[_self.setting.start_nb]);//路面第2档
+    //$(".road_right_part img").attr("src",_self.rightArray[_self.setting.start_nb]);//路面第2档
+    //
+    //$(".infoTxt").css({"background": "url('media/images/txt11.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+    //var slowCarPartTime3 = setTimeout(function(){
+    //    $(".infoTxt").removeClass("bounceInUp").addClass("dn");
+    //    window.clearTimeout(slowCarPartTime3);
+    //},4000);
+    //
+    //$(".fast").one("click",function(){
+    //    $(".infoTxt").css({"background": "url('media/images/txt11.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+    //    var slowCarPartTime = setTimeout(function(){
+    //        $(".infoTxt").removeClass("bounceInUp").addClass("dn");
+    //        window.clearTimeout(slowCarPartTime);
     //        _self.loadingPartsix();
-    //        window.clearTimeout(loadingToFive);
-    //    },8000);
-    //}
+    //    },4000);
+    //    _self.offEvent();
+    //    _self.bindEvent();
+    //});
+    //
+    //
+    //$(".slow").one("click",function(){
+    //    $(".infoTxt").css({"background": "url('media/images/txt07.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+    //    var slowCarPartTime2 = setTimeout(function(){
+    //        $(".infoTxt").removeClass("bounceInUp").addClass("dn");
+    //        window.clearTimeout(slowCarPartTime2);
+    //        _self.loadingPartsix();
+    //    },4000);
+    //    _self.offEvent();
+    //    _self.bindEvent();
+    //});
+
+
 }
 
 carWidge.prototype.loadingPartsix = function() { //老婆电话
@@ -600,7 +600,7 @@ carWidge.prototype.loadingPart9 = function() { //结果页
             var mobile = $("input[name='Tel']").val();
             $.ajax({
                 type: 'POST',
-                url: 'http://res.jiconglin.com/jt93ask/Scoreinfocomplete?username='+userNmae+'&mobile='+mobile+'&license_plate='+license_plate+'&source='+lastsource,
+                url: 'http://res.jiconglin.com/jt93ask/Scoreinfocomplete?username='+userNmae+'&mobile='+mobile+'&license_plate='+license_plate+'&source=1',
                 dataType: 'jsonp',
                 success: function () {
                     alert("提交成功，信息已收到!");
