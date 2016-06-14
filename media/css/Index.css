@@ -89,7 +89,7 @@ li.bor_b_n{ border-bottom:none!important;}
 .bus{width:23.8%; height:30.8%; position: absolute; top:0; right:26%; background: url("../images/bus.png") no-repeat; background-size:100% 100%; z-index:2;}
 .result{ position: absolute; top:35%; left:21%;font-size:25px; color: #be4334;}
 .persent{ position: absolute; top:50%; left:20%;font-size: 25px; color:#000;}
-.r_text{ position: absolute; top:75%; left:35%;font-size:16px; font-weight:600; color:#000;}
+.r_text{ position: absolute;width:32.1%; top:72%; left:9%;font-size:16px; font-weight:600; color:#000;}
 .shareNb{ position: absolute; bottom:17.5%; right:16%;font-size:25px; font-weight:600; color:#000;}
 .shareButton{width:24.3%; height:15.6%; position: absolute; bottom:38%; right:2%; cursor:pointer}
 .testOne{width:24.3%; height:15.6%; position: absolute; bottom:55.74%; right:2%; cursor:pointer}

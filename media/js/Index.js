@@ -41,9 +41,7 @@ $(function(){
 
     $(".start_button").on("click",function(){
         $(".game_start").fadeOut(500);
-        //kkk.bindEvent();
-        kkk.introduce();
-        //kkk.loadingSene(".mod_road_one,.mod_one","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0");//导入第一个场景
-        //kkk.loadingPart9();
+        //kkk.introduce();
+        kkk.loadingPart5();
     });
 });
