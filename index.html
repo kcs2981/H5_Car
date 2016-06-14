@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=0.5, maximum-scale=0.5,  user-scalable=0" name="viewport" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1,  user-scalable=0,user-scalable=no" name="viewport"  />
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style"  />
     <meta content="telephone=no" name="format-detection" />
@@ -25,6 +25,8 @@
     <div class="hp_txt"></div>
 </div>
 <div class="fakeloader"><img class="v_h" src="media/images/loading.gif" /></div>
+
+<div class="agreement dn"><a class="icon_agree" href="javascript:;"></a></div>
 
 <div class="game_start"><a class="start_button" href="javascript:;"></a></div>
 
@@ -128,6 +130,15 @@
             <div class="shareNb">1900</div>
             <div class="shareButton"></div>
             <div class="testOne"></div>
+            <div class="joinUs"></div>
+        </div>
+
+        <div class="submitBox dn">
+            <input class="submitInput" type="text" name="userName"/>
+            <input class="submitInput" type="text" name="carNb"/>
+            <input class="submitInput" type="text" name="Tel"/>
+            <input class="submitInput" type="text" name="carLastNb"/>
+            <a href="javascript:;" class="submitIt">提交</a>
         </div>
 
         <div class="shareBox dn"></div>
@@ -140,6 +151,29 @@
 </div>
 </body>
 <script src="media/js/jquery-1.12.4.js?0603" charset="utf-8"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    //浏览器判断
+    var ua = {						//3
+        android: false,
+        android2: false,
+        iphone: false,
+        ipad: false,
+        pc: false,
+        wechat: true,
+        chinabluenews: false
+    };
+    (function () {
+        var ua_str = window.navigator.userAgent.toLowerCase();
+
+
+        if (/micromessenger/.test(ua_str)) {
+            ua.wechat = true;
+            ua.chinabluenews = false;
+        }
+    })();
+</script>
+<script src="media/js/fenxiang.js" charset="utf-8"></script>
 <script src="media/js/jquery.mobile.js?0603" charset="utf-8"></script>
 <script src="media/js/carWidget.js?0603" charset="utf-8"></script>
 <script src="media/js/Index.js?0605" charset="utf-8"></script>

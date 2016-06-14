@@ -351,12 +351,26 @@ carWidge.prototype.loadingPart4 = function() { //可乐喝完场景
 carWidge.prototype.loadingPart5 = function() { //限速
     var _self =this;
     _self.resetIt();
-    _self.loadingSene(".mod_five,.mod_road_Two","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
-        var loadingToFive= setTimeout(function(){
-            _self.loadingPartsix();
-            window.clearTimeout(loadingToFive);
-        },8000);
-    });
+    _self.loadingSene(".mod_five,.mod_road_Two","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0");
+    _self.setting.start_nb = 2;//限速进来默认第二档。提示超速。根据用户操作扣分；
+    _self.setting.element.attr("src",_self.setting.picArray[_self.setting.start_nb]);//路面第2档
+    $(".road_left_part img").attr("src",_self.leftArray[_self.setting.start_nb]);//路面第2档
+    $(".road_right_part img").attr("src",_self.rightArray[_self.setting.start_nb]);//路面第2档
+
+    $(".infoTxt").css({"background": "url('media/images/txt03.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+    var sixPartTim2 = setTimeout(function(){
+        $(".infoTxt").removeClass("bounceInUp").addClass("dn");
+        window.clearTimeout(sixPartTim2);
+
+        _self.loadingPartadd();
+    },4000);
+
+    //function(){
+    //    var loadingToFive= setTimeout(function(){
+    //        _self.loadingPartsix();
+    //        window.clearTimeout(loadingToFive);
+    //    },8000);
+    //}
 }
 
 carWidge.prototype.loadingPartsix = function() { //老婆电话
@@ -506,13 +520,31 @@ carWidge.prototype.loadingPart9 = function() { //结果页
     var _self =this;
     _self.resetIt();
     $(".result").html(_self.resultData);
+    fenxiang("一个月内无违章，三吨汽油送给你","我的“行商”是"+_self.resultData+"分，已经超过x%的车主，快来测下你的“行商”分","一个月内无违章，三吨汽油送给你"); //百分比根据接口返回的值设置
     $(".mod_result").removeClass("dn");
+    $(".shareButton,.testOne,.joinUs,.icon_agree,.submitIt").off("click");
     $(".shareButton").on("click",function(){
         _self.loadingPart10();
     })
     $(".testOne").on("click",function(){
         window.location.reload();
     })
+    $(".joinUs").on("click",function(){
+        $(".agreement").removeClass("dn");
+    });
+    $(".icon_agree").on("click",function(){
+        $(".agreement").addClass("dn");
+        $(".submitBox").removeClass("dn");
+    });
+    $(".submitIt").on("click",function(){
+        if($("input[name='userName']").val() =="" || $("input[name='carNb']").val() =="" || $("input[name='Tel']").val() =="" || $("input[name='carLastNb']").val() =="" || !$("input[name='userName']").val() || !$("input[name='carNb']").val() || !$("input[name='Tel']").val() || !$("input[name='carLastNb']").val()){
+            alert("请填写相关资料，确保信息完整。");
+        }else{
+            alert("提交成功，信息已收到!");
+            $(".submitBox").addClass("dn");
+        }
+    });
+
 }
 
 carWidge.prototype.loadingPart10 = function() { //分享页
