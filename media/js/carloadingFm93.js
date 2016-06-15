@@ -45,7 +45,7 @@ $(function(){
         indexs--;
         if(indexs <=-3){
             indexs = -3;
-            window.location.href="/indexFm93.html?" + new Date().getTime();
+            window.location.href="./indexFm93.html?" + new Date().getTime();
             return;
         }
         $(".liactive").removeClass("liactive");
@@ -54,7 +54,7 @@ $(function(){
     });
 
     $(".close_it").on("click",function(){
-        window.location.href="/indexFm93.html?" + new Date().getTime();
+        window.location.href="./indexFm93.html?" + new Date().getTime();
     });
 
     $(".joinUs_button").on("click",function(){
@@ -67,8 +67,14 @@ $(function(){
     });
 
     $(".submitIt").on("click",function(){
+        var regTel = /^1\d{10}$/;
+        var regNb = /^\d{6}$/;
         if($("input[name='userName']").val() =="" || $("input[name='carNb']").val() =="" || $("input[name='Tel']").val() =="" || $("input[name='carLastNb']").val() =="" || !$("input[name='userName']").val() || !$("input[name='carNb']").val() || !$("input[name='Tel']").val() || !$("input[name='carLastNb']").val()){
             alert("请填写相关资料，确保信息完整。");
+        }else if(!regTel.test($("input[name='Tel']").val())) {
+            alert("手机号为1开头的11位纯数字");
+        }else if(!regNb.test($("input[name='carLastNb']").val())) {
+            alert("车架号位6位数字");
         }else{
             var userNmae = $("input[name='userName']").val();
             var license_plate = $("input[name='carNb']").val();

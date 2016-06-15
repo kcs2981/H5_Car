@@ -671,8 +671,14 @@ carWidge.prototype.loadingPart9 = function() { //结果页
         $(".submitBox").removeClass("dn");
     });
     $(".submitIt").on("click",function(){
+        var regTel = /^1\d{10}$/;
+        var regNb = /^\d{6}$/;
         if($("input[name='userName']").val() =="" || $("input[name='carNb']").val() =="" || $("input[name='Tel']").val() =="" || $("input[name='carLastNb']").val() =="" || !$("input[name='userName']").val() || !$("input[name='carNb']").val() || !$("input[name='Tel']").val() || !$("input[name='carLastNb']").val()){
             alert("请填写相关资料，确保信息完整。");
+        }else if(!regTel.test($("input[name='Tel']").val())) {
+            alert("手机号为1开头的11位纯数字");
+        }else if(!regNb.test($("input[name='carLastNb']").val())) {
+            alert("车架号位6位数字");
         }else{
             var userNmae = $("input[name='userName']").val();
             var license_plate = $("input[name='carNb']").val();
