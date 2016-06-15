@@ -81,6 +81,7 @@ carWidge.prototype.runCar = function(){ //开车
     openVideo.play();
     openVideo.onended = function(){
         _self.resetIt();
+        $(".car_map").removeClass("dn");
         $(".run").removeClass("introduce");
         _self.loadingSene(".fm93Show,.mod_fm93","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","200,200,200,1500","0,0,0,0");
         //var picLength = _self.setting.picArray.length;
@@ -368,16 +369,16 @@ carWidge.prototype.loadingPart4 = function() { //可乐喝完场景
 carWidge.prototype.loadingPart5 = function() { //限速
     var _self =this;
     _self.resetIt();
-    //showshine("fast",500,1500,1000);
-    //showshine("slow",500,1500,2500);
-    _self.loadingSene(".mod_five,.mod_road_Two","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,0","0,0,0,0",function(){
-        var loadingToFive= setTimeout(function(){
-            _self.offEvent();
-            _self.bindEvent();
-            _self.loadingPartsix();
-            window.clearTimeout(loadingToFive);
-        },3000);
-    });
+    showshine("fast",500,1500,1000);
+    showshine("slow",500,1500,2500);
+    _self.loadingSene(".mod_five,.mod_road_Two","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,0","0,0,0,0");
+    //    var loadingToFive= setTimeout(function(){
+    //        _self.offEvent();
+    //        _self.bindEvent();
+    //        _self.loadingPartsix();
+    //        window.clearTimeout(loadingToFive);
+    //    },3000);
+    //});
     //_self.setting.start_nb = 2;//限速进来默认第二档。提示超速。根据用户操作扣分；
     //_self.setting.element.attr("src",_self.setting.picArray[_self.setting.start_nb]);//路面第2档
     //$(".road_left_part img").attr("src",_self.leftArray[_self.setting.start_nb]);//路面第2档
@@ -389,28 +390,32 @@ carWidge.prototype.loadingPart5 = function() { //限速
     //    window.clearTimeout(slowCarPartTime3);
     //},4000);
     //
-    //$(".fast").one("click",function(){
-    //    $(".infoTxt").css({"background": "url('./media/images/txt11.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
-    //    var slowCarPartTime = setTimeout(function(){
-    //        $(".infoTxt").removeClass("bounceInUp").addClass("dn");
-    //        window.clearTimeout(slowCarPartTime);
-    //        _self.loadingPartsix();
-    //    },4000);
-    //    _self.offEvent();
-    //    _self.bindEvent();
-    //});
-    //
-    //
-    //$(".slow").one("click",function(){
-    //    $(".infoTxt").css({"background": "url('./media/images/txt07.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
-    //    var slowCarPartTime2 = setTimeout(function(){
-    //        $(".infoTxt").removeClass("bounceInUp").addClass("dn");
-    //        window.clearTimeout(slowCarPartTime2);
-    //        _self.loadingPartsix();
-    //    },4000);
-    //    _self.offEvent();
-    //    _self.bindEvent();
-    //});
+    $(".fast").one("click",function(){
+        $(".infoTxt").css({"background": "url('./media/images/txt11.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+        var slowCarPartTime = setTimeout(function(){
+            $(".infoTxt").removeClass("bounceInUp").addClass("dn");
+            window.clearTimeout(slowCarPartTime);
+            _self.offEvent();
+            _self.bindEvent();
+            _self.loadingPartsix();
+        },4000);
+        _self.offEvent();
+        _self.bindEvent();
+    });
+
+
+    $(".slow").one("click",function(){
+        $(".infoTxt").css({"background": "url('./media/images/txt07.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+        var slowCarPartTime2 = setTimeout(function(){
+            $(".infoTxt").removeClass("bounceInUp").addClass("dn");
+            window.clearTimeout(slowCarPartTime2);
+            _self.offEvent();
+            _self.bindEvent();
+            _self.loadingPartsix();
+        },4000);
+        _self.offEvent();
+        _self.bindEvent();
+    });
 
 
 }
@@ -480,8 +485,11 @@ carWidge.prototype.loadingPartadd = function() { //过度场景
 carWidge.prototype.loadingPart7 = function() { //禁止左转
     var dhVideo=document.getElementById("bgm_dh");
     dhVideo.play();
+    $(".map_jt,.car_map").removeClass("dn");
     showshine("fast",500,1500,1000);
-    showshine("car_steering",500,1500,2500);
+    showshine("map_jt",500,1500,2500);
+    showshine("car_steering",500,1500,4000);
+
     var _self =this;
     _self.resetIt();
     _self.stopCar();

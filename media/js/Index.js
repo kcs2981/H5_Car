@@ -33,5 +33,6 @@ $(function(){
     });
 
     kkk.introduce();
+    //kkk.loadingPart7();
 
 });

@@ -9,8 +9,12 @@ body{font-size:62.5%;}
 .wechat_txt{width:66.8%; height:21.34%; background: url("../images/wechatTxt.png") no-repeat; background-size:100% 100%; position: absolute; bottom:13.8%; left: 50%; margin-left:-33.4%;}
 .game_start{ background: url("../images/start_pic.jpg?0615") no-repeat; background-size:100% 100%; z-index: 998;}
 .game_introduce{ z-index: 998;overflow: hidden;zoom:1;background: url("../images/introduceBg.png") no-repeat; background-size:100% 100%;}
-.game_introduce ul{width:5000%;height:100%;overflow: hidden; zoom:1;}
-.game_introduce ul li{ height: 100%;float: left;}
+.close_it{ position: absolute; top:0; left:0;padding:16px;width:26px; height:26px;background: url("../images/closeIt.png?0615") no-repeat center center; background-size:26px 26px;}
+.game_introduce ul.images{width:5000%;height:100%;overflow: hidden; zoom:1;}
+.game_introduce ul.images li{ height: 100%;float: left;}
+.icon_navs{position: absolute;width:69px; top:20px;left: 50%;margin-left:-34px; display: inline-block;}
+.icon_navs li{ height:7px!important;width:7px;margin:0 8px;float: left; background: url("../images/point_h.png"); background-size:100% 100%;}
+.icon_navs li.liactive{background: url("../images/point.png?112"); background-size:100% 100%;}
 .intruduce_1{ background: url("../images/introduce_1.png?0615") no-repeat; background-size:100% 100%;}
 .intruduce_2{ background: url("../images/introduce_2.png?0615") no-repeat; background-size:100% 100%;}
 .intruduce_3{ background: url("../images/introduce_3.png?0615") no-repeat; background-size:100% 100%;}
@@ -67,7 +71,7 @@ li.bor_b_n{ border-bottom:none!important;}
 .fl { float:left;}.f_n{ float:none!important;}.fr { float:right;}.db { display:block;}.dn { display:none!important;}.cl { clear:both;}.tl { text-align:left;}.tc { text-align:center;}.tr { text-align:right;}.d_i_b{ display:inline-block!important;}.ov_z{ overflow:hidden; zoom:1;}.ov_y_a{ overflow-x:hidden; overflow-y:auto;}.po_r{ position:relative;}.po_a{ position:absolute;}.mar_c{ margin:0 auto;}
 
 /*----------car_content-----------------*/
-.car_content{ background:#659a00; width:100%; height: 100%; position:relative; top: 0; left: 0; bottom:0; right:0; overflow: hidden;zoom:1;}
+.car_content{ background:#659a00; width:100%; height: 100%; position:fixed; top: 0; left: 0; bottom:0; right:0; overflow: hidden;zoom:1;}
 
 /*--------------mod_car--------------*/
 .mod_car{ width: 100%; height:100%; position: fixed; top:0; left: 0; bottom:0; right:0; z-index:3;}
@@ -99,10 +103,10 @@ li.bor_b_n{ border-bottom:none!important;}
 .result{ position: absolute; top:34%; left:21%;font-size:25px; color: #be4334;font-weight:600!important;}
 .persent{ position: absolute; top:48%; left:18%;font-size: 25px; color:#000;font-weight:600!important;}
 .r_text{ position: absolute;width:32.1%; top:68%; left:9%;font-size:16px; font-weight:600!important; color:#000;}
-.shareNb{ position: absolute; bottom:17.5%; right:16%;font-size:25px; font-weight:600!important; color:#000;}
-.shareButton{width:24.3%; height:15.6%; position: absolute; bottom:38%; right:2%; cursor:pointer}
-.testOne{width:24.3%; height:15.6%; position: absolute; bottom:55.74%; right:2%; cursor:pointer}
-.joinUs{width:24.03%; height:19%; position: absolute; bottom:27.33%; left:47%; cursor:pointer}
+.shareNb{ position: absolute; bottom:17.2%; right:16%;font-size:25px; font-weight:600!important; color:#000;}
+.shareButton{width:20.3%; height:13.6%; position: absolute; bottom:27%; right:2.5%; cursor:pointer}
+.testOne{width:20.3%; height:13.6%; position: absolute; bottom:42%;right:2.5%;  cursor:pointer}
+.joinUs{width:24.03%; height:19%; position: absolute; bottom:25.33%; left:49%; cursor:pointer}
 .iphoneOk,.iphoneNot{width:18.9%; height:18%; position: absolute; top:41.5%; left:18.85%; cursor:pointer}
 .iphoneOk{left:62.3%;}
 .infoTxt{width:48%; height:21%; position: absolute; top:0; left:50%; margin-left:-24%; background: url("../images/txt01.png") no-repeat; background-size:100% 100%; z-index:120000;}
@@ -128,6 +132,8 @@ li.bor_b_n{ border-bottom:none!important;}
 .car_slow{left:2%;bottom:20%;  background: url("../images/stop.png") no-repeat;background-size:100% 100%;}
 .car_slow.introduce{background: url("../images/stop_h.png") no-repeat;background-size:100% 100%;}
 .drink{width:8.9%; height:38.3%; position: absolute; bottom:30%; left:55%; background: url("../images/drink.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.car_map{width:15.4%; height:16%;  position: absolute; bottom:24.5%; right:9.85%; background: url("../images/map.jpg") no-repeat; background-size:100% 100%; z-index: 3;}
+.map_jt{width:39.32%; height:70%;margin: -17% 0 0 -17%; background: url("../images/map_l.png") no-repeat; background-size:100% 100%;}
 .drink.introduce{background: url("../images/drink_h.png") no-repeat;background-size:100% 100%;}
 .smoking{width:10.8%; height:10.53%; position: absolute; bottom:26%; left:60%; background: url("../images/smoke.png") no-repeat; background-size:100% 100%; z-index: 4;}
 .smoking.introduce{background: url("../images/smoke_h.png") no-repeat;background-size:100% 100%;}

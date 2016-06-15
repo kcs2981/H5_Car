@@ -1,6 +1,6 @@
 $(function(){
     $("body,html,.fakeloader,.index_bg,.game_start,.agreement,.mod_result,.shareBox,.submitBox,.car_content,.mod_car,.mod_road_bg,.road_two_bg,.mod_roads,.road_left_part,.road_right_part,.road_left_part img,.road_right_part img,.road_run,.road_run img").css({"height":$(window).height()});
-    $(".game_introduce ul li").css({"width":$(window).width()});
+    $(".game_introduce ul.images li").css({"width":$(window).width()});
 
     /*----------横竖屏切换判断------------*/
     var on_off = false;
@@ -37,6 +37,8 @@ $(function(){
             indexs=0;
             return;
         }
+        $(".liactive").removeClass("liactive");
+        $(".icon_navs li").eq(Math.abs(indexs)).addClass("liactive");
         $(".images").css({"margin-left":w_width*indexs});
     });
     $(".game_introduce").on("swipeleft",function(){//左滑
@@ -46,7 +48,13 @@ $(function(){
             window.location.href="/indexFm93.html?" + new Date().getTime();
             return;
         }
+        $(".liactive").removeClass("liactive");
+        $(".icon_navs li").eq(Math.abs(indexs)).addClass("liactive");
         $(".images").css({"margin-left":w_width*indexs})
+    });
+
+    $(".close_it").on("click",function(){
+        window.location.href="/indexFm93.html?" + new Date().getTime();
     });
 
     $(".joinUs_button").on("click",function(){
