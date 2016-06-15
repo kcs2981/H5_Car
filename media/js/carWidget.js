@@ -77,8 +77,8 @@ carWidge.prototype.loadingSene = function(seneClass,elements,animates,times,hide
 
 carWidge.prototype.runCar = function(){ //开车
     var _self = this;
-	var openVideo=document.getElementById("bgm_open");
-	openVideo.play();
+    var openVideo=document.getElementById("bgm_open");
+    openVideo.play();
     openVideo.onended = function(){
         _self.resetIt();
         $(".run").removeClass("introduce");
@@ -93,7 +93,7 @@ carWidge.prototype.runCar = function(){ //开车
             _self.loadingPart2();
             $(".mod_fm93").empty().remove();
             window.clearTimeout(loadingToOne);
-        },6000);
+        },3000);
     };
 };
 carWidge.prototype.stopCar = function(){//停车
@@ -190,6 +190,8 @@ carWidge.prototype.introduce = function(){//操作介绍
             _self.loadingSene(".mod_road_one,.mod_one","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
                 showshine("run",500,2500,500);
             });//导入第一个场景
+            var weChatAudio=document.getElementById("weChatAudio");
+            weChatAudio.play();
             _self.bindEvent();
         },2000);
     });
@@ -314,10 +316,10 @@ carWidge.prototype.loadingPart4 = function() { //可乐喝完场景
     _self.setting.element.attr("src",_self.setting.picArray[_self.setting.start_nb]);//路面第一档
     $(".drink").removeClass("drink_2").addClass("drink_3");
 
-    var setTimes = setTimeout(function(){
+    var setTimes121 = setTimeout(function(){
         $(".drink").addClass("zoomInBig noDrink").css({"z-index":"10"});
         $(".drink_not").removeClass("dn");
-        window.clearTimeout( setTimes );
+        window.clearTimeout( setTimes121 );
         $(".drink").one("click",function(){
             $(".mod_three").empty().remove();
 
@@ -357,7 +359,7 @@ carWidge.prototype.loadingPart4 = function() { //可乐喝完场景
             _self.bindEvent();
         });
 
-    },5000);
+    },2000);
 }
 
 carWidge.prototype.loadingPart5 = function() { //限速
@@ -369,7 +371,7 @@ carWidge.prototype.loadingPart5 = function() { //限速
         var loadingToFive= setTimeout(function(){
             _self.loadingPartsix();
             window.clearTimeout(loadingToFive);
-        },8000);
+        },3000);
     });
     //_self.setting.start_nb = 2;//限速进来默认第二档。提示超速。根据用户操作扣分；
     //_self.setting.element.attr("src",_self.setting.picArray[_self.setting.start_nb]);//路面第2档
@@ -409,8 +411,8 @@ carWidge.prototype.loadingPart5 = function() { //限速
 }
 
 carWidge.prototype.loadingPartsix = function() { //老婆电话
-	var phoneVideo=document.getElementById("bgm_phone");
-	phoneVideo.play();
+    var phoneVideo=document.getElementById("bgm_phone");
+    phoneVideo.play();
     var _self =this;
     _self.resetIt();
 
@@ -461,14 +463,16 @@ carWidge.prototype.loadingPartadd = function() { //过度场景
     $(".road_right_part img").attr("src",_self.rightArray[_self.setting.start_nb]);//路面第一档
 
     var loadingToPartAdd= setTimeout(function(){
+        _self.offEvent();
+        _self.bindEvent();
         _self.loadingPart7();
         window.clearTimeout(loadingToPartAdd);
-    },8000);
+    },3000);
 }
 
 carWidge.prototype.loadingPart7 = function() { //禁止左转
-	var dhVideo=document.getElementById("bgm_dh");
-	dhVideo.play();
+    var dhVideo=document.getElementById("bgm_dh");
+    dhVideo.play();
     showshine("fast",500,1500,1000);
     showshine("car_steering",500,1500,2500);
     var _self =this;
@@ -522,9 +526,11 @@ carWidge.prototype.loadingPartaddTwo = function() { //过度场景
     $(".road_right_part img").attr("src",_self.rightArray[_self.setting.start_nb]);//路面第一档
 
     var loadingToPartAddTwo= setTimeout(function(){
+        _self.offEvent();
+        _self.bindEvent();
         _self.loadingPart8();
         window.clearTimeout(loadingToPartAddTwo);
-    },6000);
+    },3000);
 }
 
 
@@ -729,7 +735,7 @@ carWidge.prototype.bindEvent = function(){
                 _self.turnRight();
             }else{
                 $(".drink_not").addClass("dn");
-                $(".drink").removeClass("zoomInBig").removeAttr("style");
+                $(".drink").addClass("drinkIsOut").removeClass("zoomInBig").removeAttr("style");
             }
         }else{
             _self.turnRight();

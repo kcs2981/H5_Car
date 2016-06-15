@@ -29,13 +29,14 @@ $(function(){
     $(window).bind( 'orientationchange', function(e){//当屏幕方向发生变化时候，重新加载
         changeBgsize();
         if(on_off){//横屏重新加载
-            window.location.reload();
+            window.location.href=window.location.href +"?" + new Date().getTime();
         }else{
             $(".car_content").remove();
         }
     });
     var loadingTime = setTimeout(function(){
         $(".fakeloader").hide();
+        $(".game_start").removeClass("dn")
         window.clearTimeout(loadingTime);
     },1500);
 
