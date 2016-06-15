@@ -7,8 +7,9 @@ body{font-size:62.5%;}
 .hp_pic{ width:83%; height: 36.5%; background: url("../images/hp_pic.png") no-repeat; background-size:100% 100%; position: absolute; bottom:36.5%; left:0;}
 .hp_txt{width:80%; height: 11.5%; background: url("../images/hp_txt.png") no-repeat; background-size:100% 100%; position: absolute; top: 10%; left: 50%; margin-left:-40%;}
 .wechat_txt{width:66.8%; height:21.34%; background: url("../images/wechatTxt.png") no-repeat; background-size:100% 100%; position: absolute; bottom:13.8%; left: 50%; margin-left:-33.4%;}
-.game_start{ background: url("../images/start_pic.jpg") no-repeat; background-size:100% 100%; z-index: 998;}
+.game_start{ background: url("../images/start_pic.jpg?0615") no-repeat; background-size:100% 100%; z-index: 998;}
 .start_button{width:29.3%; height: 17.8%; display:block; position: absolute; bottom:11.8%; left:36.2%;}
+.joinUs_button{width:27.6%; height: 17.1%; display:block; position: absolute; bottom:15.1%; right:3.3%;}
 .agreement{ background: url("../images/agreement.jpg") no-repeat; background-size:100% 100%; z-index: 1111;}
 .icon_agree{width:54.1%; height:9.2%; display:block; position: absolute; bottom:5.2%; left:19.3%;cursor: pointer; }
 .shareImg{width:14.85%; height:26.53%; display:block; position: absolute; bottom:6.3%; right:5.3%;cursor: pointer;transform:rotate(9.8deg);  -moz-transform:rotate(9.8deg);-webkit-transform:rotate(9.8deg);}

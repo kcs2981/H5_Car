@@ -192,6 +192,7 @@ carWidge.prototype.introduce = function(){//操作介绍
             });//导入第一个场景
             var weChatAudio=document.getElementById("weChatAudio");
             weChatAudio.play();
+            _self.offEvent();
             _self.bindEvent();
         },2000);
     });
@@ -227,6 +228,8 @@ carWidge.prototype.loadingPart2 = function() { //斑马线场景
         },4000);
 
         var loadingToThree = setTimeout(function(){
+            _self.offEvent();
+            _self.bindEvent();
             _self.loadingPart3();
             $(".mod_road_Two,.mod_two").empty().remove();
             window.clearTimeout(loadingToThree);
@@ -240,7 +243,8 @@ carWidge.prototype.loadingPart2 = function() { //斑马线场景
         var peoplePartTime22 = setTimeout(function(){
             $(".infoTxt").removeClass("bounceInUp").addClass("dn");
             window.clearTimeout(peoplePartTime22);
-
+            _self.offEvent();
+            _self.bindEvent();
             _self.loadingPart3();
             $(".mod_road_Two,.mod_two").empty().remove();
         },4000);
@@ -272,6 +276,8 @@ carWidge.prototype.loadingPart3 = function() { //超车场景
             $(".infoTxt").removeClass("bounceInUp").addClass("dn");
             window.clearTimeout(otherCarPartTime);
             $(".fm93_banner").removeClass("dn");
+            _self.offEvent();
+            _self.bindEvent();
             _self.loadingPart4();
         },4000);
         _self.offEvent();
@@ -289,6 +295,8 @@ carWidge.prototype.loadingPart3 = function() { //超车场景
 
             $(".otherCar").addClass("fadeOutDownBig animated");
             $(".fm93_banner").removeClass("dn");
+            _self.offEvent();
+            _self.bindEvent();
             _self.loadingPart4();
         },4000);
         _self.offEvent();
@@ -303,6 +311,8 @@ carWidge.prototype.loadingPart3 = function() { //超车场景
             $(".infoTxt").removeClass("bounceInUp").addClass("dn");
             window.clearTimeout(otherCarPartTime3);
             $(".fm93_banner").removeClass("dn");
+            _self.offEvent();
+            _self.bindEvent();
             _self.loadingPart4();
         },4000);
         _self.offEvent();
@@ -328,6 +338,8 @@ carWidge.prototype.loadingPart4 = function() { //可乐喝完场景
             var drinkPartTime = setTimeout(function(){
                 $(".infoTxt").removeClass("bounceInUp").addClass("dn");
                 window.clearTimeout(drinkPartTime);
+                _self.offEvent();
+                _self.bindEvent();
                 _self.loadingPart5();
             },4000);
             _self.offEvent();
@@ -342,6 +354,8 @@ carWidge.prototype.loadingPart4 = function() { //可乐喝完场景
             var drinkPartTime2 = setTimeout(function(){
                 $(".infoTxt").removeClass("bounceInUp").addClass("dn");
                 window.clearTimeout(drinkPartTime2);
+                _self.offEvent();
+                _self.bindEvent();
                 _self.loadingPart5();
             },4000);
             _self.offEvent();
@@ -353,6 +367,8 @@ carWidge.prototype.loadingPart4 = function() { //可乐喝完场景
             var drinkPartTime3 = setTimeout(function(){
                 $(".infoTxt").removeClass("bounceInUp").addClass("dn");
                 window.clearTimeout(drinkPartTime3);
+                _self.offEvent();
+                _self.bindEvent();
                 _self.loadingPart5();
             },4000);
             _self.offEvent();
@@ -369,6 +385,8 @@ carWidge.prototype.loadingPart5 = function() { //限速
     //showshine("slow",500,1500,2500);
     _self.loadingSene(".mod_five,.mod_road_Two","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,0","0,0,0,0",function(){
         var loadingToFive= setTimeout(function(){
+            _self.offEvent();
+            _self.bindEvent();
             _self.loadingPartsix();
             window.clearTimeout(loadingToFive);
         },3000);
@@ -430,7 +448,8 @@ carWidge.prototype.loadingPartsix = function() { //老婆电话
             var sixPartTime = setTimeout(function(){
                 $(".infoTxt").removeClass("bounceInUp").addClass("dn");
                 window.clearTimeout(sixPartTime);
-
+                _self.offEvent();
+                _self.bindEvent();
                 _self.loadingPartadd();
             },4000);
 
@@ -446,7 +465,8 @@ carWidge.prototype.loadingPartsix = function() { //老婆电话
             var sixPartTim2 = setTimeout(function(){
                 $(".infoTxt").removeClass("bounceInUp").addClass("dn");
                 window.clearTimeout(sixPartTim2);
-
+                _self.offEvent();
+                _self.bindEvent();
                 _self.loadingPartadd();
             },4000);
 
@@ -554,6 +574,8 @@ carWidge.prototype.loadingPart8 = function() { //接老婆
                 $(".jt").addClass("dn");
                 _self.stopCar();
                 _self.resultData = _self.resultData-10;
+                _self.offEvent();
+                _self.bindEvent();
                 _self.loadingPart9();
                 $(".drink").removeClass("turenLeftIt");
 
@@ -572,6 +594,8 @@ carWidge.prototype.loadingPart8 = function() { //接老婆
                 $(".jt").addClass("dn");
                 _self.stopCar();
                 _self.resultData = _self.resultData-10;
+                _self.offEvent();
+                _self.bindEvent();
                 _self.loadingPart9();
                 $(".drink").removeClass("turenLeftIt");
 
@@ -589,6 +613,8 @@ carWidge.prototype.loadingPart8 = function() { //接老婆
                 $(".jt").addClass("dn");
                 _self.stopCar();
                 _self.resultData = _self.resultData-10;
+                _self.offEvent();
+                _self.bindEvent();
                 _self.loadingPart9();
                 $(".drink").removeClass("turenLeftIt");
 
@@ -605,6 +631,8 @@ carWidge.prototype.loadingPart8 = function() { //接老婆
                 window.clearTimeout(noLeftPartTim2);
                 $(".jt").addClass("dn");
                 _self.stopCar();
+                _self.offEvent();
+                _self.bindEvent();
                 _self.loadingPart9();
                 $(".drink").removeClass("turenLeftIt");
 
@@ -705,6 +733,9 @@ carWidge.prototype.bindEvent = function(){
             $(this).addClass("zoomInBig").css({"z-index":"10"})
         }
     });
+
+
+
 
     $(".smoking").on("click",function(){
         if($(this).hasClass("zoomInBig")){

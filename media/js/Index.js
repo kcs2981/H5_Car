@@ -45,4 +45,34 @@ $(function(){
         kkk.introduce();
         //kkk.loadingPartaddTwo();
     });
+
+    $(".joinUs_button").on("click",function(){
+        $(".agreement").removeClass("dn");
+    });
+    $(".icon_agree").on("click",function(){
+        $(".agreement").addClass("dn");
+        $(".submitBox").removeClass("dn");
+    });
+    $(".submitIt").on("click",function(){
+        if($("input[name='userName']").val() =="" || $("input[name='carNb']").val() =="" || $("input[name='Tel']").val() =="" || $("input[name='carLastNb']").val() =="" || !$("input[name='userName']").val() || !$("input[name='carNb']").val() || !$("input[name='Tel']").val() || !$("input[name='carLastNb']").val()){
+            alert("请填写相关资料，确保信息完整。");
+        }else{
+            var userNmae = $("input[name='userName']").val();
+            var license_plate = $("input[name='carNb']").val();
+            var lastsource = kkk.resultData;
+            var carLastNb = $("input[name='carLastNb']").val();
+            var mobile = $("input[name='Tel']").val();
+            $.ajax({
+                type: 'POST',
+                url: 'http://res.jiconglin.com/jt93ask/Scoreinfocomplete?username='+userNmae+'&mobile='+mobile+'&license_plate='+license_plate+'&source=1&vinno='+carLastNb,
+                dataType: 'jsonp',
+                success: function () {
+                    alert("提交成功，信息已收到!");
+                    $(".submitBox").addClass("dn");
+                },
+                error: function () {
+                }
+            });
+        }
+    });
 });
