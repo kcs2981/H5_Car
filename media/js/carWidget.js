@@ -81,6 +81,7 @@ carWidge.prototype.runCar = function(){ //开车
     openVideo.play();
     openVideo.onended = function(){
         _self.resetIt();
+        $(".icon_s").addClass("dn");
         $(".car_map").removeClass("dn");
         $(".run").removeClass("introduce");
         _self.loadingSene(".fm93Show,.mod_fm93","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","200,200,200,1500","0,0,0,0");
@@ -179,6 +180,7 @@ carWidge.prototype.turnRight= function(){ //右转
 carWidge.prototype.introduce = function(){//操作介绍
     var _self = this;
     _self.loadingSene(".mod_road_one,.mod_one","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
+        $(".icon_s").removeClass("dn");
         showshine("run",500,2500,500);
     });//导入第一个场景
     var weChatAudio=document.getElementById("weChatAudio");
@@ -485,7 +487,7 @@ carWidge.prototype.loadingPartadd = function() { //过度场景
 carWidge.prototype.loadingPart7 = function() { //禁止左转
     var dhVideo=document.getElementById("bgm_dh");
     dhVideo.play();
-    $(".map_jt,.car_map").removeClass("dn");
+    $(".map_jt").removeClass("dn");
     showshine("fast",500,1500,1000);
     showshine("map_jt",500,1500,2500);
     showshine("car_steering",500,1500,4000);
@@ -533,6 +535,7 @@ carWidge.prototype.loadingPart7 = function() { //禁止左转
 }
 
 carWidge.prototype.loadingPartaddTwo = function() { //过度场景
+    $(".map_jt,.car_map").addClass("dn");
     var _self =this;
     _self.resetIt();
     _self.setting.start_nb = 1;
@@ -558,11 +561,29 @@ carWidge.prototype.loadingPart8 = function() { //接老婆
     $("body").off("swiperight");
     $("body").off("swipeleft");
     showshine("slow",500,1500,1000);
-    showshine("jt",500,1500,2500);
+    showshine("fast",500,1500,2500);
     showshine("car_steering",500,1500,4000);
     _self.loadingSene(".mod_8,.mod_road_8","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
         $(".slow").one("click",function(){
             $(".infoTxt").css({"background": "url('./media/images/txt06.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+            var noLeftPartTim2 = setTimeout(function(){
+                $(".infoTxt").removeClass("bounceInUp").addClass("dn");
+                window.clearTimeout(noLeftPartTim2);
+                $(".jt").addClass("dn");
+                _self.stopCar();
+                _self.resultData = _self.resultData-10;
+                _self.offEvent();
+                _self.bindEvent();
+                _self.loadingPart9();
+                $(".drink").removeClass("turenLeftIt");
+
+            },4000);
+
+
+        });
+
+        $(".fast").one("click",function(){
+            $(".infoTxt").css({"background": "url('./media/images/txt09.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
             var noLeftPartTim2 = setTimeout(function(){
                 $(".infoTxt").removeClass("bounceInUp").addClass("dn");
                 window.clearTimeout(noLeftPartTim2);
@@ -617,24 +638,24 @@ carWidge.prototype.loadingPart8 = function() { //接老婆
 
 
         });
-
-        $("body").one("swiperight",".jt",function(){//右滑操作
-            _self.turnRight();
-            $(".infoTxt").css({"background": "url('./media/images/txt09.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
-            var noLeftPartTim2 = setTimeout(function(){
-                $(".infoTxt").removeClass("bounceInUp").addClass("dn");
-                window.clearTimeout(noLeftPartTim2);
-                $(".jt").addClass("dn");
-                _self.stopCar();
-                _self.offEvent();
-                _self.bindEvent();
-                _self.loadingPart9();
-                $(".drink").removeClass("turenLeftIt");
-
-            },4000);
-
-
-        });
+        //
+        //$("body").one("swiperight",".jt",function(){//右滑操作
+        //    _self.turnRight();
+        //    $(".infoTxt").css({"background": "url('./media/images/txt09.png') no-repeat","background-size":"100% 100%"}).removeClass("bounceOutUp").removeClass("dn").addClass("bounceInUp");
+        //    var noLeftPartTim2 = setTimeout(function(){
+        //        $(".infoTxt").removeClass("bounceInUp").addClass("dn");
+        //        window.clearTimeout(noLeftPartTim2);
+        //        $(".jt").addClass("dn");
+        //        _self.stopCar();
+        //        _self.offEvent();
+        //        _self.bindEvent();
+        //        _self.loadingPart9();
+        //        $(".drink").removeClass("turenLeftIt");
+        //
+        //    },4000);
+        //
+        //
+        //});
     });
 }
 
@@ -676,9 +697,9 @@ carWidge.prototype.loadingPart9 = function() { //结果页
         if($("input[name='userName']").val() =="" || $("input[name='carNb']").val() =="" || $("input[name='Tel']").val() =="" || $("input[name='carLastNb']").val() =="" || !$("input[name='userName']").val() || !$("input[name='carNb']").val() || !$("input[name='Tel']").val() || !$("input[name='carLastNb']").val()){
             alert("请填写相关资料，确保信息完整。");
         }else if(!regTel.test($("input[name='Tel']").val())) {
-            alert("手机号为1开头的11位纯数字");
+            alert("手机号码有误，请检查");
         }else if(!regNb.test($("input[name='carLastNb']").val())) {
-            alert("车架号位6位数字");
+            alert("车架号必须为6位数字");
         }else{
             var userNmae = $("input[name='userName']").val();
             var license_plate = $("input[name='carNb']").val();
@@ -690,7 +711,7 @@ carWidge.prototype.loadingPart9 = function() { //结果页
                 url: 'http://res.jiconglin.com/jt93ask/Scoreinfocomplete?username='+userNmae+'&mobile='+mobile+'&license_plate='+license_plate+'&source=1&vinno='+carLastNb,
                 dataType: 'jsonp',
                 success: function () {
-                    alert("提交成功，信息已收到!");
+                    alert("报名已收到！活动结果请关注FM93与中国人保财险官微发布。");
                     $(".submitBox").addClass("dn");
                 },
                 error: function () {

@@ -33,6 +33,6 @@ $(function(){
     });
 
     kkk.introduce();
-    //kkk.loadingPart7();
+    //kkk.loadingPart8();
 
 });

@@ -1,4 +1,6 @@
 $(function(){
+    var myVideo=document.getElementById("bgm_music");
+    myVideo.play();
     $("body,html,.fakeloader,.index_bg,.game_start,.agreement,.mod_result,.shareBox,.submitBox,.car_content,.mod_car,.mod_road_bg,.road_two_bg,.mod_roads,.road_left_part,.road_right_part,.road_left_part img,.road_right_part img,.road_run,.road_run img").css({"height":$(window).height()});
     $(".game_introduce ul.images li").css({"width":$(window).width()});
 
@@ -53,6 +55,18 @@ $(function(){
         $(".images").css({"margin-left":w_width*indexs})
     });
 
+    $(".game_introduce").on("click",function(){//点击
+        indexs--;
+        if(indexs <=-3){
+            indexs = -3;
+            window.location.href="./indexFm93.html?" + new Date().getTime();
+            return;
+        }
+        $(".liactive").removeClass("liactive");
+        $(".icon_navs li").eq(Math.abs(indexs)).addClass("liactive");
+        $(".images").css({"margin-left":w_width*indexs})
+    });
+
     $(".close_it").on("click",function(){
         window.location.href="./indexFm93.html?" + new Date().getTime();
     });
@@ -72,9 +86,9 @@ $(function(){
         if($("input[name='userName']").val() =="" || $("input[name='carNb']").val() =="" || $("input[name='Tel']").val() =="" || $("input[name='carLastNb']").val() =="" || !$("input[name='userName']").val() || !$("input[name='carNb']").val() || !$("input[name='Tel']").val() || !$("input[name='carLastNb']").val()){
             alert("请填写相关资料，确保信息完整。");
         }else if(!regTel.test($("input[name='Tel']").val())) {
-            alert("手机号为1开头的11位纯数字");
+            alert("手机号码有误，请检查");
         }else if(!regNb.test($("input[name='carLastNb']").val())) {
-            alert("车架号位6位数字");
+            alert("车架号必须为6位数字");
         }else{
             var userNmae = $("input[name='userName']").val();
             var license_plate = $("input[name='carNb']").val();
@@ -85,7 +99,7 @@ $(function(){
                 url: 'http://res.jiconglin.com/jt93ask/Scoreinfocomplete?username='+userNmae+'&mobile='+mobile+'&license_plate='+license_plate+'&source=1&vinno='+carLastNb,
                 dataType: 'jsonp',
                 success: function () {
-                    alert("提交成功，信息已收到!");
+                    alert("报名已收到！活动结果请关注FM93与中国人保财险官微发布。");
                     $(".submitBox").addClass("dn");
                 },
                 error: function () {

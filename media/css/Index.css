@@ -110,7 +110,7 @@ li.bor_b_n{ border-bottom:none!important;}
 .iphoneOk,.iphoneNot{width:18.9%; height:18%; position: absolute; top:41.5%; left:18.85%; cursor:pointer}
 .iphoneOk{left:62.3%;}
 .infoTxt{width:48%; height:21%; position: absolute; top:0; left:50%; margin-left:-24%; background: url("../images/txt01.png") no-repeat; background-size:100% 100%; z-index:120000;}
-.jt{width:9.4%; height:30.8%; position: absolute; top:5%; right:41.4%; margin-left:-24%; background: url("../images/jt.png") no-repeat; background-size:100% 100%; z-index:6;}
+.jt{width:22.54%; height:24.54%; position: absolute; top:8%; right:35.4%; margin-left:-24%; background: url("../images/jt.png") no-repeat; background-size:100% 100%; z-index:6;}
 .jt.introduce{background: url("../images/jt_h.png?112") no-repeat;background-size:100% 100%;margin:-3.7% -3.7% 0 0;}
 
 /*----------car control--------*/
@@ -125,6 +125,7 @@ li.bor_b_n{ border-bottom:none!important;}
 .car_left.icon_active{background: url("../images/left_h.png") no-repeat;background-size:100% 100%;}
 .car_right.icon_active{background: url("../images/right_h.png") no-repeat;background-size:100% 100%;}
 .car_icon_start{width:4.78%; height:8.7%; position: absolute; bottom:16%; left:62%; background: url("../images/start.png") no-repeat; background-size:100% 100%; z-index: 4;}
+.icon_s{width:30px; height:30px; margin:15px 0 0 15px;  background: url("../images/s.gif") no-repeat; background-size:100% 100%;}
 .car_icon_start.introduce{background: url("../images/start_h.png") no-repeat;background-size:100% 100%;}
 .car_fast,.car_slow{width:12.4%; height:23%; position: absolute;  background: url("../images/go.png") no-repeat; background-size:100% 100%; z-index: 4;}
 .car_fast{right:2%;bottom:20%; }
@@ -133,7 +134,7 @@ li.bor_b_n{ border-bottom:none!important;}
 .car_slow.introduce{background: url("../images/stop_h.png") no-repeat;background-size:100% 100%;}
 .drink{width:8.9%; height:38.3%; position: absolute; bottom:30%; left:55%; background: url("../images/drink.png") no-repeat; background-size:100% 100%; z-index: 4;}
 .car_map{width:15.4%; height:16%;  position: absolute; bottom:24.5%; right:9.85%; background: url("../images/map.jpg") no-repeat; background-size:100% 100%; z-index: 3;}
-.map_jt{width:39.32%; height:70%;margin: -17% 0 0 -17%; background: url("../images/map_l.png") no-repeat; background-size:100% 100%;}
+.map_jt{width:39.32%; height:70%;margin:7% 0 0 15%; background: url("../images/map_l.png") no-repeat; background-size:100% 100%;}
 .drink.introduce{background: url("../images/drink_h.png") no-repeat;background-size:100% 100%;}
 .smoking{width:10.8%; height:10.53%; position: absolute; bottom:26%; left:60%; background: url("../images/smoke.png") no-repeat; background-size:100% 100%; z-index: 4;}
 .smoking.introduce{background: url("../images/smoke_h.png") no-repeat;background-size:100% 100%;}
