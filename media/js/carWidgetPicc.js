@@ -177,26 +177,13 @@ carWidge.prototype.turnRight= function(){ //右转
 
 carWidge.prototype.introduce = function(){//操作介绍
     var _self = this;
-    $(".fm93Show,.mod_fm93").fadeIn().find("div").show();
-    showshine("run",500,1500,500);
-    showshine("car_steering",500,1500,2500);
-    showshine("slow",500,1500,4500);
-    showshine("fast",500,1500,6500);
-    showshine("smoking",500,1500,8500);
-    showshine("drink",500,1500,10500,function(){
-        var toLoadingPart = setTimeout(function(){
-            $(".run,.drink,.smoking,.slow,.fast,.car_steering").removeClass("introduce");
-            window.clearTimeout(toLoadingPart);
-            _self.loadingSene(".mod_road_one,.mod_one","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
-                showshine("run",500,2500,500);
-            });//导入第一个场景
-            var weChatAudio=document.getElementById("weChatAudio");
-            weChatAudio.play();
-            _self.offEvent();
-            _self.bindEvent();
-        },2000);
-    });
-
+    _self.loadingSene(".mod_road_one,.mod_one","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
+        showshine("run",500,2500,500);
+    });//导入第一个场景
+    var weChatAudio=document.getElementById("weChatAudio");
+    weChatAudio.play();
+    _self.offEvent();
+    _self.bindEvent();
 
     $.ajax({
         type: 'POST',
@@ -666,7 +653,7 @@ carWidge.prototype.loadingPart9 = function() { //结果页
         _self.loadingPart10();
     })
     $(".testOne").on("click",function(){
-        window.location.reload();
+        window.location.href=window.location.href +"?" + new Date().getTime();
     })
     $(".joinUs").on("click",function(){
         $(".agreement").removeClass("dn");

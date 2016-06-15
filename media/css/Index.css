@@ -1,13 +1,19 @@
 @charset "utf-8";
 /*-----------------loading 切换至横屏 gameStart-------------*/
 body{font-size:62.5%;}
-.fakeloader,.index_bg,.game_start,.agreement{ position:fixed; width: 100%; height: 100%; top: 0; left:0; bottom:0; right:0; z-index: 999; background: #334455;}
+.fakeloader,.index_bg,.game_start,.agreement,.game_introduce{ position:fixed; width: 100%; height: 100%; top: 0; left:0; bottom:0; right:0; z-index: 999; background: #334455;}
 .fakeloader img{display: block; width:38%; position: relative; top: 50%; left: 50%; margin-left:-19%;}
 .index_bg{background: url("../images/hp_repit_x.png") repeat-x #fff; background-size: auto 100%;z-index: 1000;}
 .hp_pic{ width:83%; height: 36.5%; background: url("../images/hp_pic.png") no-repeat; background-size:100% 100%; position: absolute; bottom:36.5%; left:0;}
 .hp_txt{width:80%; height: 11.5%; background: url("../images/hp_txt.png") no-repeat; background-size:100% 100%; position: absolute; top: 10%; left: 50%; margin-left:-40%;}
 .wechat_txt{width:66.8%; height:21.34%; background: url("../images/wechatTxt.png") no-repeat; background-size:100% 100%; position: absolute; bottom:13.8%; left: 50%; margin-left:-33.4%;}
 .game_start{ background: url("../images/start_pic.jpg?0615") no-repeat; background-size:100% 100%; z-index: 998;}
+.game_introduce{ z-index: 998;overflow: hidden;zoom:1;background: url("../images/introduceBg.png") no-repeat; background-size:100% 100%;}
+.game_introduce ul{width:5000%;height:100%;overflow: hidden; zoom:1;}
+.game_introduce ul li{ height: 100%;float: left;}
+.intruduce_1{ background: url("../images/introduce_1.png?0615") no-repeat; background-size:100% 100%;}
+.intruduce_2{ background: url("../images/introduce_2.png?0615") no-repeat; background-size:100% 100%;}
+.intruduce_3{ background: url("../images/introduce_3.png?0615") no-repeat; background-size:100% 100%;}
 .start_button{width:29.3%; height: 17.8%; display:block; position: absolute; bottom:11.8%; left:36.2%;}
 .joinUs_button{width:27.6%; height: 17.1%; display:block; position: absolute; bottom:15.1%; right:3.3%;}
 .agreement{ background: url("../images/agreement.jpg") no-repeat; background-size:100% 100%; z-index: 1111;}
@@ -92,7 +98,7 @@ li.bor_b_n{ border-bottom:none!important;}
 .bus{width:23.8%; height:30.8%; position: absolute; top:0; right:26%; background: url("../images/bus.png?112") no-repeat; background-size:100% 100%; z-index:2;}
 .result{ position: absolute; top:34%; left:21%;font-size:25px; color: #be4334;font-weight:600!important;}
 .persent{ position: absolute; top:48%; left:18%;font-size: 25px; color:#000;font-weight:600!important;}
-.r_text{ position: absolute;width:32.1%; top:72%; left:9%;font-size:16px; font-weight:600!important; color:#000;}
+.r_text{ position: absolute;width:32.1%; top:68%; left:9%;font-size:16px; font-weight:600!important; color:#000;}
 .shareNb{ position: absolute; bottom:17.5%; right:16%;font-size:25px; font-weight:600!important; color:#000;}
 .shareButton{width:24.3%; height:15.6%; position: absolute; bottom:38%; right:2%; cursor:pointer}
 .testOne{width:24.3%; height:15.6%; position: absolute; bottom:55.74%; right:2%; cursor:pointer}
