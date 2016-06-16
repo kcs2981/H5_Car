@@ -1,7 +1,7 @@
 $(function(){
     var myVideo=document.getElementById("bgm_music");
     myVideo.play();
-    fenxiang("迎接G20做文明出行好司机，3吨汽油等你来拿","一个月内无违章，三吨汽油送给你","迎接G20做文明出行好司机，3吨汽油等你来拿");
+    fenxiang("测测你的“行商”，看看你的开车习惯打几分？","加入FM93文明出行倡导队伍，做文明行车好司机，一个月0违章赢3吨汽油。","测测你的“行商”，看看你的开车习惯打几分？");
     $("body,html,.fakeloader,.index_bg,.game_start,.agreement,.mod_result,.shareBox,.submitBox,.car_content,.mod_car,.mod_road_bg,.road_two_bg,.mod_roads,.road_left_part,.road_right_part,.road_left_part img,.road_right_part img,.road_run,.road_run img").css({"height":$(window).height()});
     $(".game_introduce ul.images li").css({"width":$(window).width()});
 

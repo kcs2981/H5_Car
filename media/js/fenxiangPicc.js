@@ -36,7 +36,7 @@ function fenxiang(a,b,c){
 					}
 					wx.ready(function () {
 						var news_title = a;
-						var news_link = "www.picc.com";
+						var news_link = "http://mp.weixin.qq.com/s?__biz=MjM5NjU1MzkzMA==&mid=2650599974&idx=1&sn=d009546458f994441e378f6cbfc12725#rd";
 						var news_image = "http://res.jiconglin.com/images/jt93static/gooddriver/media/images/sharePic.jpg";
 						var news_intro = b;
 						var news_Timeline = c;

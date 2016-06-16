@@ -36,7 +36,7 @@ function fenxiang(a,b,c){
 					}
 					wx.ready(function () {
 						var news_title = a;
-						var news_link = "./loadingFm93.html";
+						var news_link = "res.jiconglin.com/jt93ask/Gooddriver";
 						var news_image = "http://res.jiconglin.com/images/jt93static/gooddriver/media/images/sharePic.jpg";
 						var news_intro = b;
 						var news_Timeline = c;

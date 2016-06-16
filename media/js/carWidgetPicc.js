@@ -670,7 +670,7 @@ carWidge.prototype.loadingPart9 = function() { //结果页
             $(".persent").html(data.data.percent);
             $(".r_text").html(data.data.tip);
             $(".shareNb").html(_self.totalPeople);
-            fenxiang("我的“行商”是"+_self.resultData+"分，已经超过"+data.data.percent+"%的车主，快来测下你的“行商”分","一个月内无违章，三吨汽油送给你","我的“行商”是"+_self.resultData+"分，已经超过"+data.data.percent+"%的车主，快来测下你的“行商”分"); //百分比根据接口返回的值设置
+            fenxiang("我的“行商”是"+_self.resultData+"分，已经超过"+data.data.percent+"%的车主，快来测下你的“行商”分","加入FM93文明出行倡导队伍，做文明行车好司机，一个月0违章赢3吨汽油。","我的“行商”是"+_self.resultData+"分，已经超过"+data.data.percent+"%的车主，快来测下你的“行商”分"); //百分比根据接口返回的值设置
             $(".mod_result").removeClass("dn");
         },
         error: function () {
