@@ -181,7 +181,7 @@ carWidge.prototype.introduce = function(){//操作介绍
     var _self = this;
     _self.loadingSene(".mod_road_one,.mod_one","a_bounceInLeft,a_bounceInRight,a_bounceInDown,a_flipInX","bounceInLeft,bounceInRight,bounceInDown,flipInX","0,0,0,1500","0,0,0,0",function(){
         $(".icon_s").removeClass("dn");
-        showshine("run",500,2500,500);
+        //showshine("run",500,2500,500);
     });//导入第一个场景
     var weChatAudio=document.getElementById("weChatAudio");
     weChatAudio.play();
@@ -589,7 +589,6 @@ carWidge.prototype.loadingPart8 = function() { //接老婆
                 window.clearTimeout(noLeftPartTim2);
                 $(".jt").addClass("dn");
                 _self.stopCar();
-                _self.resultData = _self.resultData-10;
                 _self.offEvent();
                 _self.bindEvent();
                 _self.loadingPart9();

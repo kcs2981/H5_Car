@@ -1,6 +1,7 @@
 $(function(){
     var myVideo=document.getElementById("bgm_music");
     myVideo.play();
+    fenxiang("迎接G20做文明出行好司机，3吨汽油等你来拿","一个月内无违章，三吨汽油送给你","迎接G20做文明出行好司机，3吨汽油等你来拿");
     $("body,html,.fakeloader,.index_bg,.game_start,.agreement,.mod_result,.shareBox,.submitBox,.car_content,.mod_car,.mod_road_bg,.road_two_bg,.mod_roads,.road_left_part,.road_right_part,.road_left_part img,.road_right_part img,.road_run,.road_run img").css({"height":$(window).height()});
     $(".game_introduce ul.images li").css({"width":$(window).width()});
 
@@ -47,7 +48,7 @@ $(function(){
         indexs--;
         if(indexs <=-3){
             indexs = -3;
-            window.location.href="./indexFm93.html?" + new Date().getTime();
+            window.location.href="./indexPicc.html?" + new Date().getTime();
             return;
         }
         $(".liactive").removeClass("liactive");
@@ -59,7 +60,7 @@ $(function(){
         indexs--;
         if(indexs <=-3){
             indexs = -3;
-            window.location.href="./indexFm93.html?" + new Date().getTime();
+            window.location.href="./indexPicc.html?" + new Date().getTime();
             return;
         }
         $(".liactive").removeClass("liactive");
@@ -68,7 +69,7 @@ $(function(){
     });
 
     $(".close_it").on("click",function(){
-        window.location.href="./indexFm93.html?" + new Date().getTime();
+        window.location.href="./indexPicc.html?" + new Date().getTime();
     });
 
     $(".joinUs_button").on("click",function(){
