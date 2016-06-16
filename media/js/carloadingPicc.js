@@ -23,7 +23,7 @@ $(function(){
     $(window).bind( 'orientationchange', function(e){//当屏幕方向发生变化时候，重新加载
         changeBgsize();
         if(on_off){//横屏重新加载
-            window.location.href=window.location.href +"?" + new Date().getTime();
+            window.location.href="./loadingPicc.html?" + new Date().getTime();
         }
     });
     var loadingTime = setTimeout(function(){
