@@ -83,13 +83,13 @@ $(function(){
 
     $(".submitIt").on("click",function(){
         var regTel = /^1\d{10}$/;
-        var regNb = /^\d{6}$/;
+        var regNb = /^[a-zA-Z0-9]{6}$/;
         if($("input[name='userName']").val() =="" || $("input[name='carNb']").val() =="" || $("input[name='Tel']").val() =="" || $("input[name='carLastNb']").val() =="" || !$("input[name='userName']").val() || !$("input[name='carNb']").val() || !$("input[name='Tel']").val() || !$("input[name='carLastNb']").val()){
             alert("请填写相关资料，确保信息完整。");
         }else if(!regTel.test($("input[name='Tel']").val())) {
             alert("手机号码有误，请检查");
         }else if(!regNb.test($("input[name='carLastNb']").val())) {
-            alert("车架号必须为6位数字");
+            alert("车架号有误，请检查格式");
         }else{
             var userNmae = $("input[name='userName']").val();
             var license_plate = $("input[name='carNb']").val();
